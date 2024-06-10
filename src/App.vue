@@ -1,7 +1,9 @@
 <template>
-  <Navbar/>
-  <router-view/>
-  <Footbar/>
+  <div class="main">
+    <Navbar class="navbar"/>
+    <router-view/>
+    <Footbar/>
+  </div>
 </template>
 <script setup>
 import Navbar from "@/components/Navbar.vue";
@@ -16,17 +18,19 @@ import Footbar from "@/components/Footbar.vue";
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
+  .main {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+    @media (max-width: 700px) {
+      padding: 0 10px;
+    }
 
-    &.router-link-exact-active {
-      color: #42b983;
+    .navbar {
+      //position: sticky;
+      //top: 0;
     }
   }
 }

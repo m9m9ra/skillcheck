@@ -1,13 +1,1 @@
-<template>
-  <div class="homeView">
-
-  </div>
-</template>
-<script setup>
-
-</script>
-<style lang="scss" scoped>
-.homeView {
-
-}
-</style>
+<template>  <div class="homeView">    <MainSlider/>    <div class="divider"/>    <MainContent/>    <BottomSlider/>    <h3>КОНТАКТЫ</h3>    <FeedbackForm/>  </div></template><script setup>import MainSlider from "@/components/MainSlider.vue";import BottomSlider from "@/components/BottomSlider.vue";import FeedbackForm from "@/components/FeedbackForm.vue";import MainContent from "@/components/MainContent.vue";</script><style lang="scss" scoped>.homeView {  .divider {    height: 150px;  }  h3 {    text-align: left;  }}</style>
