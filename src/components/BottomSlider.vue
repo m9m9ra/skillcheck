@@ -1,7 +1,7 @@
 <template>
   <div class="bottomSlider">
     <div class="block img1">
-      <h3>УСЛУГИ</h3>
+      <h3 id="services">УСЛУГИ</h3>
       <div class="divider"/>
       <h2>Таможенное оформление</h2>
       <p>Таможенное оформление – это комплекс всех таможенных процедур по помещению грузов и транспорта

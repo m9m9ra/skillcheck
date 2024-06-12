@@ -124,6 +124,7 @@ onMounted(() => {
   background-position: center;
   //background-image: url("../assets/slide/02.png");
   background-repeat: no-repeat;
+  transition: 2s;
   color: white;
 
   padding: 10px 56px 20px 4%;

@@ -1,6 +1,6 @@
 <template>
   <div class="mainContent">
-    <h3>О КОМПАНИИ</h3>
+    <h3 id="aboutCompany">О КОМПАНИИ</h3>
     <div class="divider"/>
 
     <div class="top">

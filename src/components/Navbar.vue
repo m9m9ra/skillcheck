@@ -6,9 +6,10 @@
            width="69"/>
 
       <ul>
-        <li>О КОМПАНИИ</li>
-        <li>УСЛУГИ</li>
-        <li>КОНТАКТЫ</li>
+
+        <li><a href="#aboutCompany">О КОМПАНИИ</a></li>
+        <li><a href="#services">УСЛУГИ</a></li>
+        <li><a href="#contacts">КОНТАКТЫ</a></li>
       </ul>
 
       <div class="menu">
@@ -36,52 +37,53 @@
       </svg>
     </div>
 
-    <div class="mobileMenu" v-if="showMenu">
-      <p>О КОМПАНИИ</p>
-      <p>УСЛУГИ</p>
-      <p>КОНТАКТЫ</p>
+    <div class="mobileMenu" v-show="showMenu">
+      <div class="modal">
+        <p><a href="#aboutCompany">О КОМПАНИИ</a></p>
+        <p><a href="#services">УСЛУГИ</a></p>
+        <p><a href="#contacts">КОНТАКТЫ</a></p>
 
-      <div class="divider"/>
+        <div class="divider"/>
 
-      <div class="callback">
-        <p>
-          СВЯЗАТЬСЯ
-        </p>
+        <div class="callback">
+          <p>
+            СВЯЗАТЬСЯ
+          </p>
 
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0.75" y="0.75" width="18.5" height="18.5" rx="9.25" stroke="#00A0E3" stroke-width="1.5"/>
-          <path d="M15 10L10 10M10 10L5 10M10 10L10 5M10 10L10 15" stroke="#00A0E3" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </div>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.75" y="0.75" width="18.5" height="18.5" rx="9.25" stroke="#00A0E3" stroke-width="1.5"/>
+            <path d="M15 10L10 10M10 10L5 10M10 10L10 5M10 10L10 15" stroke="#00A0E3" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
 
-      <div class="callback">
-        <p>
-          СМОТРЕТЬ СЕРТИФИКАТЫ
-        </p>
+        <div class="callback">
+          <p>
+            СМОТРЕТЬ СЕРТИФИКАТЫ
+          </p>
 
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0.75" y="0.75" width="18.5" height="18.5" rx="9.25" stroke="#00A0E3" stroke-width="1.5"/>
-          <path d="M15 10L10 10M10 10L5 10M10 10L10 5M10 10L10 15" stroke="#00A0E3" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </div>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.75" y="0.75" width="18.5" height="18.5" rx="9.25" stroke="#00A0E3" stroke-width="1.5"/>
+            <path d="M15 10L10 10M10 10L5 10M10 10L10 5M10 10L10 15" stroke="#00A0E3" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
 
-      <div class="divider"/>
+        <div class="divider"/>
 
-      <div class="social">
-        <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3.19989 28.945L4.9665 22.495L5.04917 22.1932L4.89282 21.9221C3.65526 19.7766 3.00522 17.3427 3.00821 14.8659L3.00821 14.8653C3.01147 7.08283 9.34605 0.750207 17.1288 0.75L3.19989 28.945ZM3.19989 28.945L9.82623 27.2074L10.1142 27.1319L10.3755 27.2744C12.4372 28.3985 14.7591 28.9915 17.1225 28.9925C17.1226 28.9925 17.1227 28.9925 17.1228 28.9925H17.129C24.9106 28.9925 31.2465 22.6587 31.25 14.8766L3.19989 28.945ZM17.1292 0.75C20.9082 0.75198 24.4508 2.22098 27.118 4.89C29.7853 7.55913 31.2513 11.1032 31.25 14.8766L17.1292 0.75Z" stroke="#00A0E3" stroke-width="1.5"/>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.397 9.18015C13.1216 8.61225 12.8318 8.60074 12.5702 8.59091L11.8659 8.58293C11.6209 8.58293 11.2227 8.66828 10.8862 9.00965C10.5496 9.35103 9.6001 10.1761 9.6001 11.8542C9.6001 13.5323 10.9168 15.1539 11.1002 15.3817C11.2837 15.6095 13.642 19.163 17.3767 20.5302C20.4803 21.6664 21.1119 21.4404 21.7858 21.3836C22.4597 21.3268 23.9596 20.5586 24.2656 19.7621C24.5716 18.9656 24.5718 18.2832 24.4801 18.1405C24.3883 17.9979 24.1433 17.9131 23.7756 17.7424C23.4078 17.5717 21.6017 16.7467 21.265 16.6327C20.9282 16.5188 20.6834 16.4622 20.4381 16.8036C20.1929 17.145 19.4896 17.9129 19.2752 18.1405C19.0607 18.3682 18.8467 18.3968 18.4789 18.2263C18.1112 18.0558 16.9281 17.6955 15.5243 16.5335C14.432 15.6294 13.6948 14.5129 13.4801 14.1717C13.2655 13.8305 13.4573 13.6457 13.6416 13.4757C13.8065 13.3229 14.0089 13.0774 14.193 12.8783C14.3771 12.6793 14.4376 12.537 14.56 12.3097C14.6823 12.0824 14.6213 11.8828 14.5294 11.7123C14.4374 11.5418 13.7236 9.85474 13.397 9.18015Z" fill="#00A0E3"/>
-        </svg>
+        <div class="social">
 
 
-        <svg width="37" height="30" viewBox="0 0 37 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M36 1L1 15L13.8947 16.8667M36 1L31.3947 29L13.8947 16.8667M36 1L13.8947 16.8667M13.8947 16.8667V27.1333L19.8797 21.0163" stroke="#00A0E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+          <img src="../assets/svg/WhatsAppPng.png" height="30" width="32"/>
 
-        <svg width="47" height="28" viewBox="0 0 47 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M27.5962 26.8227V19.2123C32.7423 19.9917 34.3692 24.0147 37.6462 26.8227H46C43.9114 22.1911 40.7952 18.0887 36.8846 14.8226C39.8846 10.7193 43.0692 6.85682 44.6269 1H37.0346C34.0577 5.48144 32.4885 10.7308 27.5962 14.1922V1H16.5769L19.2077 4.23214V15.7509C14.9385 15.2581 12.0538 7.49867 8.92692 1H1C3.88462 9.77951 9.95385 29.0463 27.5962 26.8227Z" stroke="#00A0E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
 
+          <svg width="37" height="30" viewBox="0 0 37 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M36 1L1 15L13.8947 16.8667M36 1L31.3947 29L13.8947 16.8667M36 1L13.8947 16.8667M13.8947 16.8667V27.1333L19.8797 21.0163" stroke="#00A0E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <svg width="47" height="28" viewBox="0 0 47 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.5962 26.8227V19.2123C32.7423 19.9917 34.3692 24.0147 37.6462 26.8227H46C43.9114 22.1911 40.7952 18.0887 36.8846 14.8226C39.8846 10.7193 43.0692 6.85682 44.6269 1H37.0346C34.0577 5.48144 32.4885 10.7308 27.5962 14.1922V1H16.5769L19.2077 4.23214V15.7509C14.9385 15.2581 12.0538 7.49867 8.92692 1H1C3.88462 9.77951 9.95385 29.0463 27.5962 26.8227Z" stroke="#00A0E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+        </div>
       </div>
     </div>
   </div>
@@ -100,53 +102,87 @@ const toggleMenu = () => {
   background-color: white;
   z-index: 10;
 
+
   .mobileMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    transition: 0.4s;
+    height: 90vh;
+    width: 93%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    transition: 1s;
 
-    .divider {
-      height: 30px;
-    }
-
-    p {
-      font-weight: 400;
-      font-size: 14px;
-      color: rgba(43, 42, 41, 1);
-      margin: 0;
-      padding: 0;
-      margin-bottom: 16px;
-    }
-
-    .callback {
+    .modal {
       display: flex;
-      gap: 10px;
-      font-weight: 600;
-      text-decoration: underline;
+      flex-direction: column;
+      align-items: start;
+      position: relative;
+      bottom: 1px;
+      right: 1px;
+      padding-left: 1px;
+      transition: 0.4s;
+      background-color: #FFFFFF;
+      width: 100%;
 
+
+      .divider {
+        height: 30px;
+      }
 
       p {
+        font-weight: 400;
+        font-size: 14px;
         color: rgba(43, 42, 41, 1);
+        margin: 0;
+        padding: 0;
+        margin-bottom: 16px;
+
+        a {
+          font-size: 15px;
+          font-weight: 400;
+          text-decoration: none;
+          color: rgba(43, 42, 41, 1);
+
+          &:active,
+          &:hover {
+            cursor: pointer;
+            scale: 1.1;
+            text-decoration: none;
+
+            color: rgba(0, 160, 227, 1);
+            text-decoration: underline;
+          }
+        }
       }
 
-      &:hover {
-        cursor: pointer;
-        scale: 1.1;
-      }
-    }
+      .callback {
+        display: flex;
+        gap: 10px;
+        font-weight: 600;
+        text-decoration: underline;
 
-    .social {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 30px;
 
-      svg {
+        p {
+          color: rgba(43, 42, 41, 1);
+        }
 
         &:hover {
-          scale: 1.1;
           cursor: pointer;
+          scale: 1.1;
+        }
+      }
+
+      .social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+
+        svg {
+
+          &:hover {
+            scale: 1.1;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -170,15 +206,21 @@ const toggleMenu = () => {
       }
 
       li {
-        font-size: 14px;
-        font-weight: 400;
+        a {
+          font-size: 14px;
+          font-weight: 400;
+          text-decoration: none;
+          color: rgba(43, 42, 41, 1);
 
-        &:hover {
-          cursor: pointer;
-          scale: 1.1;
+          &:active,
+          &:hover {
+            cursor: pointer;
+            scale: 1.1;
+            text-decoration: none;
 
-          color: rgba(0, 160, 227, 1);
-          text-decoration: underline;
+            color: rgba(0, 160, 227, 1);
+            text-decoration: underline;
+          }
         }
       }
     }
