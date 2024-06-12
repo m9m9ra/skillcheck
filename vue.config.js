@@ -10,7 +10,7 @@ module.exports = defineConfig({
 
   filenameHashing: false,
   outputDir: 'dist',
-  publicPath: '/spa/dist/',
+  publicPath: '/',
   // publicPath: 'http://localhost:5000/',
   configureWebpack: {
     optimization: {
