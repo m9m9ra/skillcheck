@@ -2,10 +2,14 @@
   <div class="feedbackForm">
 
     <div class="left">
-      <h1>
-        <span>Если у вас есть</span> вопросы
-        <span>или вы хотели бы</span> заказать
-        услуги <span>в нашей компании, заполните</span> форму
+      <div class="divider"/>
+      <h1 id="feedback" :ref="feedback">
+        <span class="span">Если у вас есть</span>
+        вопросы
+        <span class="span">или вы хотели бы</span>
+        заказать услуги
+        <span class="span">в нашей компании, заполните</span>
+        форму
       </h1>
 
       <form action="">
@@ -26,18 +30,34 @@
 
         <textarea placeholder="Комментарий"/>
 
-        <button type="submit">ОТПРАВИТЬ</button>
+        <div class="callback">
+          <p>
+            ОТПРАВИТЬ
+          </p>
+
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.75" y="0.75" width="18.5" height="18.5" rx="9.25" stroke="#00A0E3" stroke-width="1.5"/>
+            <path d="M15 10L10 10M10 10L5 10M10 10L10 5M10 10L10 15" stroke="#00A0E3" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
 
         <p>
-          Нажимая на кнопку «Оставить заявку» вы соглашаетесь с политикой обработки
-          персональных данных
+          Нажимая на кнопку «Оставить заявку» вы соглашаетесь с <a href="#">политикой обработки
+          персональных данных</a>
         </p>
       </form>
 
+      <div class="divider" v-if="dividerShow"/>
+    </div>
 
+    <div class="divider">
+      <div>
+
+      </div>
     </div>
 
     <div class="right">
+      <div class="divider"/>
       <h2>+7(950) 676-76-81</h2>
 
       <div class="card">
@@ -49,7 +69,7 @@
 
         <p>
           238300, Калининградская область, г. Гурьевск, ул.
-          <br/>
+          <br v-if="dividerShow"/>
           Луговая д. 2а/2 офис 8
         </p>
       </div>
@@ -96,23 +116,88 @@
       </div>
 
       <div class="map">
-
+        <yandex-map
+            v-model="map"
+            :settings="{
+        location: {
+          center: [37.617644, 55.755819],
+          zoom: 9,
+        },
+      }"
+            style="max-width: 590px"
+            width="100%"
+            :height="windowWidth > 960 ? `261px` : `500px`"
+        >
+          <yandex-map-default-features-layer />
+          <yandex-map-default-scheme-layer/>
+        </yandex-map>
       </div>
+
+      <div class="divider" v-if="dividerShow"/>
     </div>
   </div>
 </template>
 <script setup>
+import {onMounted, ref} from "vue";
+import { shallowRef } from 'vue';
+import { YandexMap, YandexMapDefaultSchemeLayer } from 'vue-yandex-maps';
+
+//Можно использовать для различных преобразований
+const map = shallowRef(null);
+
+const dividerShow = ref(true);
+const windowWidth = ref(window.innerWidth - 40);
+const feedback = ref();
+
+onMounted(() => {
+  dividerShow.value = window.innerWidth >= 701;
+  console.log(feedback.value);
+
+  window.addEventListener('scroll', function () {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > 5000) {
+
+    }
+
+  });
+})
+
 
 </script>
 <style scoped lang="scss">
 .feedbackForm {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  @media (max-width: 1280px) {
+    flex-wrap: wrap;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      width: 1px;
+      height: 700px;
+      background: #A2A0A0;
+      @media (max-width: 700px) {
+        display: none;
+      }
+    }
+  }
 
   .left {
     text-align: left;
     max-width: 700px;
+    .divider {
+      height: 1px;
+      background-color: #A2A0A0;
+      margin-bottom: 30px;
+      @media (min-width: 700px) {
+
+      }
+    }
 
     h1 {
       font-size: 48px;
@@ -147,35 +232,94 @@
         width: 109px;
         margin-top: 20px;
       }
+
+      .callback {
+        display: flex;
+        gap: 10px;
+        font-weight: 600;
+        align-items: center;
+        border-bottom: 1px solid black;
+        max-width: 120px;
+
+
+        p {
+          color: rgba(43, 42, 41, 1);
+        }
+
+        &:hover {
+          cursor: pointer;
+          scale: 1.1;
+        }
+      }
+
+      a {
+        color: rgba(0, 160, 227, 1);
+      }
     }
   }
 
   .right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-right: 60px;
+    //display: flex;
+    //flex-direction: column;
+    //align-items: flex-start;
     text-align: left;
+
+    @media (min-width: 960px) {
+      padding-right: 60px;
+    }
+
+
+    .divider {
+      height: 1px;
+      background-color: #A2A0A0;
+      margin-bottom: 30px;
+      width: 100%;
+      @media (max-width: 820px) {
+        padding: 0;
+      }
+    }
 
     h2 {
       font-weight: 600;
       font-size: 48px;
       color: #A2A0A0;
       width: 100%;
+
+      @media (max-width: 700px) {
+        font-size: 32px;
+      }
     }
 
     .card {
       display: flex;
       align-items: center;
+      justify-content: start;
       gap: 20px;
       margin-bottom: 14px;
       line-height: 1.8;
+
+      @media (max-width: 700px) {
+        font-size: 12px;
+        gap: 10px;
+        padding-right: 60px;
+      }
     }
 
     .bottom {
       display: flex;
-      justify-content: center;
+      justify-content: start;
       gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .map {
+      max-width: 590px;
+      display: flex;
+      align-items: center;
+
+      @media (min-width: 960px) {
+        padding-bottom: 40px;
+      }
     }
   }
 }

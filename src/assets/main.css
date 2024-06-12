@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "Involve";
+    src:
+            local("Involve"),
+            url("./fonts/Involve-Regular.ttf") format("truetype")
+}
