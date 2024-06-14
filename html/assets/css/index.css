@@ -1,0 +1,797 @@
+#app {
+  font-family: "Involve", Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#app .main {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media (max-width: 700px) {
+  #app .main {
+    padding: 0 10px;
+  }
+}
+#app .main .navmenu {
+  background-color: white;
+  z-index: 10;
+}
+#app .main .navmenu .mobileMenu {
+  height: 90vh;
+  width: 93%;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  transition: 1s;
+}
+#app .main .navmenu .mobileMenu .modal {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  bottom: 1px;
+  right: 1px;
+  padding-left: 1px;
+  transition: 0.4s;
+  background-color: #FFFFFF;
+  width: 100%;
+}
+#app .main .navmenu .mobileMenu .modal .divider {
+  height: 30px;
+}
+#app .main .navmenu .mobileMenu .modal p {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(43, 42, 41);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+}
+#app .main .navmenu .mobileMenu .modal p a {
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  color: rgb(43, 42, 41);
+}
+#app .main .navmenu .mobileMenu .modal p a:active, #app .main .navmenu .mobileMenu .modal p a:hover {
+  cursor: pointer;
+  scale: 1.1;
+  text-decoration: none;
+  color: rgb(0, 160, 227);
+  text-decoration: underline;
+}
+#app .main .navmenu .mobileMenu .modal .callback {
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+#app .main .navmenu .mobileMenu .modal .callback p {
+  color: rgb(43, 42, 41);
+}
+#app .main .navmenu .mobileMenu .modal .callback:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+#app .main .navmenu .mobileMenu .modal .social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+#app .main .navmenu .mobileMenu .modal .social svg:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+#app .main .navmenu .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 33px;
+  padding-bottom: 27px;
+  background-color: #FFFFFF;
+}
+#app .main .navmenu .navbar ul {
+  outline: none;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+@media (max-width: 700px) {
+  #app .main .navmenu .navbar ul {
+    display: none;
+  }
+}
+#app .main .navmenu .navbar ul li a {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: rgb(43, 42, 41);
+}
+#app .main .navmenu .navbar ul li a:active, #app .main .navmenu .navbar ul li a:hover {
+  cursor: pointer;
+  scale: 1.1;
+  text-decoration: none;
+  color: rgb(0, 160, 227);
+  text-decoration: underline;
+}
+#app .main .navmenu .navbar .menu {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+@media (max-width: 700px) {
+  #app .main .navmenu .navbar .menu {
+    display: none;
+  }
+}
+#app .main .navmenu .navbar .menu:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+#app .main .navmenu .navbar .burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+@media (min-width: 700px) {
+  #app .main .navmenu .navbar .burger {
+    display: none;
+  }
+}
+#app .main .navmenu .navbar .burger div {
+  width: 30px;
+  height: 3px;
+  background: black;
+  border-radius: 5px;
+}
+#app .main .navmenu .navbar .burger:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+#app .main .mainSlider {
+  height: 640px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 2s;
+  color: white;
+  padding: 10px 56px 20px 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  #app .main .mainSlider {
+    padding: 0 13px 14px 13px;
+    background-position: right;
+  }
+}
+#app .main .mainSlider .top {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 690px) {
+  #app .main .mainSlider .top {
+    flex-direction: column;
+  }
+  #app .main .mainSlider .top h1 {
+    height: 105px;
+  }
+}
+#app .main .mainSlider .top .slider {
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 46px;
+}
+#app .main .mainSlider .top .slider .slide {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #A2A0A0;
+}
+@media (max-width: 690px) {
+  #app .main .mainSlider .top .slider .slide .divider {
+    height: 60px;
+  }
+}
+#app .main .mainSlider .top .slider .slide p {
+  font-size: 12px;
+  font-weight: 400;
+}
+#app .main .mainSlider .top .slider .slide .divider {
+  height: 80px;
+  width: 2px;
+  background-color: #A2A0A0;
+}
+#app .main .mainSlider .top .slider .current p {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+#app .main .mainSlider .top .slider .current .divider {
+  background-color: #FFFFFF;
+}
+#app .main .mainSlider .top h1 {
+  white-space: pre-wrap;
+  text-align: left;
+  font-size: 70px;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  #app .main .mainSlider .top h1 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 1280px) and (min-width: 701px) {
+  #app .main .mainSlider .top h1 {
+    font-size: 48px;
+  }
+}
+#app .main .mainSlider .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 700px) {
+  #app .main .mainSlider .bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+#app .main .mainSlider .bottom .card h3 {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  #app .main .mainSlider .bottom .card h3 {
+    font-size: 24px;
+  }
+}
+#app .main .mainSlider .bottom .card p {
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  #app .main .mainSlider .bottom .card p {
+    font-size: 8px;
+  }
+}
+#app .main .mainSlider .bottom .divider {
+  width: 1px;
+  background-color: white;
+  height: 77px;
+}
+@media (max-width: 700px) {
+  #app .main .mainSlider .bottom .divider {
+    display: none;
+  }
+}
+#app .main .bgimg1 {
+  background-image: url("./../../assets/slide/01.jpg");
+}
+#app .main .bgimg2 {
+  background-image: url("./../../assets/slide/02.png");
+}
+#app .main .bgimg3 {
+  background-image: url("./../../assets/slide/03.jpg");
+}
+#app .main .bgimg4 {
+  background-image: url("./../../assets/slide/04.jpg");
+}
+#app .main .mainContent h3 {
+  text-align: left;
+  font-size: 10px;
+  color: #A2A0A0;
+}
+@media (max-width: 700px) {
+  #app .main .mainContent .divider {
+    height: 1px;
+    background-color: #A2A0A0;
+    margin-bottom: 30px;
+  }
+}
+#app .main .mainContent .top {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 980px) {
+  #app .main .mainContent .top {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+#app .main .mainContent .top .left {
+  max-width: 804px;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: left;
+}
+@media (min-width: 980px) {
+  #app .main .mainContent .top .left {
+    clip-path: polygon(90% 0, 100% 15%, 0% 400000%, 0 0%);
+    border-right: 1px solid #A2A0A0;
+  }
+}
+#app .main .mainContent .top .left .divider {
+  width: 94%;
+  height: 1px;
+  background: #A2A0A0;
+}
+@media (max-width: 700px) {
+  #app .main .mainContent .top .left .divider {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  #app .main .mainContent .top .left {
+    font-size: 24px;
+  }
+}
+#app .main .mainContent .top .left span {
+  color: #A2A0A0;
+}
+#app .main .mainContent .top .right {
+  padding: 0 40px 60px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
+  max-width: 520px;
+}
+#app .main .mainContent .top .right .callback {
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+  align-items: center;
+  border-bottom: 1px solid #A2A0A0;
+  height: 40px;
+  max-width: 234px;
+}
+#app .main .mainContent .top .right .callback p {
+  color: rgb(43, 42, 41);
+}
+#app .main .mainContent .top .right .callback:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+#app .main .mainContent .top .right .callback svg {
+  margin: 0;
+}
+#app .main .mainContent .top .right .divider {
+  width: 94%;
+  height: 1px;
+  background: #A2A0A0;
+}
+@media (max-width: 700px) {
+  #app .main .mainContent .top .right .divider {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  #app .main .mainContent .top .right {
+    padding: 0;
+  }
+}
+#app .main .mainContent .middle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+@media (max-width: 980px) {
+  #app .main .mainContent .middle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+#app .main .mainContent .middle .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px 24px;
+  height: 165px;
+  border: 1px solid #A2A0A0;
+  clip-path: polygon(0 10%, 10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+}
+@media (max-width: 960px) {
+  #app .main .mainContent .middle .card {
+    padding: 0;
+  }
+  #app .main .mainContent .middle .card:first-child {
+    border-bottom: none;
+  }
+  #app .main .mainContent .middle .card:nth-child(2) {
+    border-left: none;
+    border-right: none;
+  }
+  #app .main .mainContent .middle .card:nth-child(3) {
+    border-left: none;
+    border-right: none;
+  }
+  #app .main .mainContent .middle .card:last-child {
+    border-top: none;
+    border-right: none;
+  }
+}
+#app .main .mainContent .middle .card:first-child {
+  border-left: none;
+}
+#app .main .mainContent .middle .card:last-child {
+  border-right: none;
+}
+@media (max-width: 700px) {
+  #app .main .mainContent .middle .card svg {
+    scale: 0.4;
+  }
+}
+@media (max-width: 700px) {
+  #app .main .mainContent .middle .card p {
+    font-size: 11px;
+  }
+}
+#app .main .mainContent .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 660px;
+}
+@media (max-width: 1280px) {
+  #app .main .mainContent .bottom {
+    flex-wrap: wrap;
+  }
+}
+#app .main .mainContent .bottom .left {
+  padding: 40px 100px 0 53px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#app .main .mainContent .bottom .left svg {
+  margin-top: 140px;
+}
+@media (max-width: 1280px) {
+  #app .main .mainContent .bottom .left .top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0;
+  }
+  #app .main .mainContent .bottom .left .top img {
+    width: 320px;
+    height: 320px;
+  }
+}
+@media (min-width: 960px) {
+  #app .main .mainContent .bottom .left .svg {
+    display: none;
+  }
+  #app .main .mainContent .bottom .left .top {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  #app .main .mainContent .bottom .left {
+    padding: 0 10px;
+    width: 99%;
+  }
+  #app .main .mainContent .bottom .left svg {
+    display: none;
+  }
+  #app .main .mainContent .bottom .left .svg svg {
+    display: block;
+  }
+}
+#app .main .mainContent .bottom .left .callback {
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+  align-items: center;
+  border-bottom: 1px solid #A2A0A0;
+  height: 40px;
+  max-width: 234px;
+}
+#app .main .mainContent .bottom .left .callback p {
+  color: rgb(43, 42, 41);
+}
+#app .main .mainContent .bottom .left .callback:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+#app .main .mainContent .bottom .left .callback svg {
+  margin: 0;
+}
+#app .main .mainContent .bottom .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 960px) {
+  #app .main .mainContent .bottom .divider {
+    display: none;
+  }
+}
+#app .main .mainContent .bottom .divider div {
+  height: 540px;
+  width: 1px;
+  background-color: #A2A0A0;
+}
+#app .main .mainContent .bottom .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+}
+@media (max-width: 700px) {
+  #app .main .mainContent .bottom .right {
+    scale: 0.4;
+    display: none;
+    position: relative;
+    right: 40px;
+  }
+}
+#app .main .bottomSlider {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#app .main .bottomSlider .block {
+  height: 640px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  color: #FFFFFF;
+  text-align: start;
+  padding: 30px 0 0 40px;
+}
+#app .main .bottomSlider .block .divider {
+  height: 1px;
+  background-color: #FFFFFF;
+}
+#app .main .bottomSlider .block h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+@media (max-width: 960px) {
+  #app .main .bottomSlider .block {
+    font-size: 12px;
+    padding: 30px 0 0 14px;
+  }
+  #app .main .bottomSlider .block h3 {
+    font-size: 10px;
+  }
+  #app .main .bottomSlider .block h2 {
+    display: none;
+  }
+}
+#app .main .bottomSlider .block h2 {
+  font-size: 48px;
+  font-weight: 600;
+}
+#app .main .bottomSlider .block p {
+  font-size: 14px;
+  font-weight: 400;
+}
+#app .main .bottomSlider .block ol {
+  padding: 0 0 0 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+}
+#app .main .bottomSlider .block .callback {
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid white;
+  max-width: 144px;
+  margin-top: 10px;
+}
+#app .main .bottomSlider .img1 {
+  background-image: url("./../../assets/slide/b01.jpg");
+}
+#app .main .bottomSlider .img1 p {
+  max-width: 500px;
+}
+#app .main .bottomSlider .img1 ol {
+  max-width: 500px;
+}
+#app .main .bottomSlider .img2 {
+  background-image: url("./../../assets/slide/b02.jpg");
+}
+#app .main .bottomSlider .img2 p {
+  max-width: 500px;
+}
+#app .main .bottomSlider .img3 {
+  background-image: url("./../../assets/slide/b03.jpg");
+}
+#app .main .bottomSlider .img3 p {
+  max-width: 400px;
+}
+#app .main .bottomSlider .img4 {
+  background-image: url("./../../assets/slide/b04.jpg");
+}
+#app .main .feedbackForm {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1280px) {
+  #app .main .feedbackForm {
+    flex-wrap: wrap;
+  }
+}
+#app .main .feedbackForm .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app .main .feedbackForm .divider div {
+  width: 1px;
+  height: 700px;
+  background: #A2A0A0;
+}
+@media (max-width: 700px) {
+  #app .main .feedbackForm .divider div {
+    display: none;
+  }
+}
+#app .main .feedbackForm .left {
+  text-align: left;
+  max-width: 700px;
+}
+#app .main .feedbackForm .left .divider {
+  height: 1px;
+  background-color: #A2A0A0;
+  margin-bottom: 30px;
+}
+#app .main .feedbackForm .left h1 {
+  font-size: 48px;
+}
+@media (max-width: 700px) {
+  #app .main .feedbackForm .left h1 {
+    font-size: 24px;
+  }
+}
+#app .main .feedbackForm .left h1 span {
+  color: #A2A0A0;
+}
+#app .main .feedbackForm .left form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (max-width: 700px) {
+  #app .main .feedbackForm .left form {
+    font-size: 11px;
+  }
+}
+#app .main .feedbackForm .left form input {
+  padding: 24px 20px;
+}
+#app .main .feedbackForm .left form textarea {
+  padding: 24px 20px;
+}
+#app .main .feedbackForm .left form button {
+  width: 109px;
+  margin-top: 20px;
+}
+#app .main .feedbackForm .left form .callback {
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+  align-items: center;
+  border-bottom: 1px solid black;
+  max-width: 120px;
+}
+#app .main .feedbackForm .left form .callback p {
+  color: rgb(43, 42, 41);
+}
+#app .main .feedbackForm .left form .callback:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+#app .main .feedbackForm .left form a {
+  color: rgb(0, 160, 227);
+}
+#app .main .feedbackForm .right {
+  text-align: left;
+}
+@media (min-width: 960px) {
+  #app .main .feedbackForm .right {
+    padding-right: 60px;
+  }
+}
+#app .main .feedbackForm .right .divider {
+  height: 1px;
+  background-color: #A2A0A0;
+  margin-bottom: 30px;
+  width: 100%;
+}
+@media (max-width: 820px) {
+  #app .main .feedbackForm .right .divider {
+    padding: 0;
+  }
+}
+#app .main .feedbackForm .right h2 {
+  font-weight: 600;
+  font-size: 48px;
+  color: #A2A0A0;
+  width: 100%;
+}
+@media (max-width: 700px) {
+  #app .main .feedbackForm .right h2 {
+    font-size: 32px;
+  }
+}
+#app .main .feedbackForm .right .card {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  margin-bottom: 14px;
+  line-height: 1.8;
+}
+@media (max-width: 700px) {
+  #app .main .feedbackForm .right .card {
+    font-size: 12px;
+    gap: 10px;
+    padding-right: 60px;
+  }
+}
+#app .main .feedbackForm .right .bottom {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+#app .main .feedbackForm .right .map {
+  max-width: 590px;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 960px) {
+  #app .main .feedbackForm .right .map {
+    padding-bottom: 40px;
+  }
+}
+#app .main .footbar {
+  padding: 40px 0;
+}
+#app .main .footbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  #app .main .footbar ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

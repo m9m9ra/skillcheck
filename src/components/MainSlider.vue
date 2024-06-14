@@ -45,7 +45,7 @@
   </div>
 </template>
 <script setup>
-import {computed, onMounted, ref} from "vue";
+import {onMounted, ref} from "vue";
 const showChars = ref(0);
 
 const clients = ref(0); // 1300

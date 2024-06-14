@@ -148,15 +148,7 @@
           <yandex-map-default-features-layer/>
           <yandex-map-default-scheme-layer/>
           <yandex-map-marker position="top-center left-center"
-                             style="width: 50px;
-  height: 50px;
-  border-radius: 50% 50% 50% 0;
-  background: #FF4433;
-  transform: rotate(-45deg);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;"
+                             style="width: 50px; height: 50px; border-radius: 50% 50% 50% 0; background: #FF4433; transform: rotate(-45deg); color: white; display: flex; justify-content: center; align-items: center;"
                                      :settings="{
                                        coordinates: [20.608611, 54.768171],
                                        title: `Луговая улица, 2A/2`
