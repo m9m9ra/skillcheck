@@ -3,6 +3,7 @@ import { createYmaps } from 'vue-yandex-maps';
 import App from './App.vue'
 import './registerServiceWorker'
 import "@/assets/main.css";
+import "@/assets/bootstrap/css/bootstrap.css";
 import router from './router'
 import store from './store'
 

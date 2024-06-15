@@ -1,8 +1,10 @@
 <template>
-  <div class="main">
-    <Navbar class="navbar"/>
-    <router-view/>
-    <Footbar/>
+  <div class="main container-fluid">
+    <div class="content container-xxl">
+      <Navbar class="navbar"/>
+      <router-view/>
+      <Footbar/>
+    </div>
   </div>
 </template>
 <script setup>
@@ -12,26 +14,38 @@ import Footbar from "@/components/Footbar.vue";
 
 </script>
 <style lang="scss">
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-xxl {
+  padding: 0;
+  margin: 0;
+}
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
 #app {
-  font-family: "Involve", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 
+  @media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1440px;
+    }
+  }
+
   .main {
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 40px;
+    padding: 0;
+  }
 
-    @media (max-width: 700px) {
-      padding: 0 10px;
-    }
-
-    .navbar {
-      //position: sticky;
-      //top: 0;
-    }
+  .content {
+    padding: 0;
   }
 }
 </style>
