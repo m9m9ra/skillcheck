@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Involve";
+    font-family: "Inter";
     src:
-            local("Involve"),
-            url("./fonts/Involve-Regular.ttf") format("truetype")
+            local("Inter"),
+            url("./fonts/InterVariable.ttf") format("truetype")
 }
