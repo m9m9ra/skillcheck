@@ -80,7 +80,7 @@
   background-repeat: no-repeat;
   background-image: url("./../assets/slide/bgFeed.png");
   background-position: bottom center;
-  background-size: cover;
+  //background-size: cover;
 
   @media (max-width: 1000px){
     padding: 55px 10px 75px 10px;

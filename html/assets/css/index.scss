@@ -224,13 +224,13 @@ body {
         display: grid;
         gap: 30px;
         text-align: left;
-        padding: 90px 30px;
+        padding: 90px 30px 240px 30px;
         background-color: rgba(20, 114, 208, 1);
         border-radius: 80px;
+        background-repeat: no-repeat;
         background-image: url("./../slide/bgFeed.png");
-        //background-repeat: no-repeat;
-        //background-position: center;
-        background-size: cover;
+        background-position: bottom center;
+        //background-size: cover;
 
         @media (max-width: 1000px){
           padding: 55px 10px 75px 10px;
@@ -238,12 +238,14 @@ body {
         }
 
         .content {
+
           .bottom {
+
             display: flex;
             flex-direction: column;
             align-items: center;
             max-width: 678px;
-            margin: 140px auto;
+            margin: 166px auto;
             text-align: center;
             color: #FFFFFF;
             gap: 40px;
@@ -251,6 +253,7 @@ body {
             h1 {
               font-size: 44px;
               font-weight: 700;
+              line-height: 60px;
 
               @media (max-width: 1000px) {
                 font-size: 24px;
@@ -348,7 +351,7 @@ body {
           }
 
           .left {
-            height: 652px;
+            min-height: 500px;
             background-color: rgba(236, 241, 247, 1);
             border: 1px solid rgba(236, 241, 247, 1);
             border-radius: 40px;
@@ -390,6 +393,7 @@ body {
               h3 {
                 font-size: 20px;
                 font-weight: 700;
+                margin: 20px 0;
               }
 
               p {
@@ -402,7 +406,7 @@ body {
           .right {
 
             .bottom {
-              height: 50%;
+              height: 35%;
               display: flex;
               align-items: flex-end;
               justify-content: space-between;
@@ -574,22 +578,62 @@ body {
             }
             p {
               font-size: 14px;
+              line-height: 26px;
               @media (max-width: 1080px) {
                 font-size: 12px;
+                bottom: 0;
               }
+              position: relative;
+              bottom: 50px;
             }
 
             .slide {
               background-image: url("./../slide/bgsl1.png");
               background-repeat: repeat-x;
-              padding-bottom: 20px;
+              background-position: bottom;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-bottom: 30px;
+
+              @media (max-width: 1000px) {
+                padding-bottom: 0;
+              }
 
               .lf {
 
+                p {
+                  color: rgba(180, 205, 237, 1);
+                  font-weight: 600;
+                  font-size: 24px;
+                  bottom: 0;
+
+                  span {
+                    font-size: 56px;
+                    font-weight: 700;
+                    color: white;
+                  }
+
+                  @media (max-width: 1080px) {
+                    font-size: 14px;
+                    bottom: 0;
+
+                    span {
+                      font-size: 28px;
+                    }
+                  }
+                }
               }
 
               .rt {
+                position: relative;
+                bottom: 20px;
+                display: flex;
+                gap: 20px;
 
+                @media (min-width: 1080px) {
+                  scale: 1.2;
+                }
               }
             }
           }
@@ -614,7 +658,7 @@ body {
 
         .topBlock {
           text-align: left;
-          padding: 150px 30px;
+          padding: 150px 30px 60px 30px;
           display: grid;
           gap: 30px;
 

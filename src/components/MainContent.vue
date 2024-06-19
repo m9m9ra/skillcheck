@@ -16,6 +16,9 @@
         </div>
       </div>
     </div>
+<!--    <video playsinline autoplay muted loop>-->
+<!--      <source src="./../assets/slide/bg.mp4" type="video/mp4">-->
+<!--    </video>-->
   </div>
 
 </template>
@@ -26,12 +29,19 @@
 <style scoped lang="scss">
 .wrapper {
   background-image: url("./../assets/slide/main.png");
-  //background-position: center;
-  //background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  //video {
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  min-width: 100%;
+  //  height: 830px;
+  //  z-index: -10;
+  //}
 
   .content {
-
     height: 830px;
 
     .left {
