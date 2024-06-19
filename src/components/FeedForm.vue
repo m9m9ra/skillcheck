@@ -60,7 +60,7 @@
         <h1>
           БЕСПЛАТНО ПОДБЕРЁМ ОБОРУДОВАНИЕ ДЛЯ ВАШЕГО ДОМА ИЛИ КВАРТИРЫ
         </h1>
-        <button type="button" class="btn btn-light" style="color: rgba(20, 114, 208, 1);">ОСТАВИТЬ ЗАЯВКУ</button>
+        <button type="button" class="btn btn-light" style="color: rgba(20, 114, 208, 1); padding: 14px 33px; font-weight: 700;">ОСТАВИТЬ ЗАЯВКУ</button>
       </div>
     </div>
   </div>
@@ -74,12 +74,12 @@
   display: grid;
   gap: 30px;
   text-align: left;
-  padding: 90px 30px;
+  padding: 90px 30px 240px 30px;
   background-color: rgba(20, 114, 208, 1);
   border-radius: 80px;
+  background-repeat: no-repeat;
   background-image: url("./../assets/slide/bgFeed.png");
-  //background-repeat: no-repeat;
-  //background-position: center;
+  background-position: bottom center;
   background-size: cover;
 
   @media (max-width: 1000px){
@@ -88,12 +88,14 @@
   }
 
   .content {
+
     .bottom {
+
       display: flex;
       flex-direction: column;
       align-items: center;
       max-width: 678px;
-      margin: 140px auto;
+      margin: 166px auto;
       text-align: center;
       color: #FFFFFF;
       gap: 40px;
@@ -101,6 +103,7 @@
       h1 {
         font-size: 44px;
         font-weight: 700;
+        line-height: 60px;
 
         @media (max-width: 1000px) {
           font-size: 24px;

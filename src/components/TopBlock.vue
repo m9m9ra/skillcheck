@@ -64,7 +64,7 @@
 
   .topBlock {
     text-align: left;
-    padding: 150px 30px;
+    padding: 150px 30px 60px 30px;
     display: grid;
     gap: 30px;
 
