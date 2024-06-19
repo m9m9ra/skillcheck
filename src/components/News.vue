@@ -1,5 +1,5 @@
 <template>
-  <div class="news">
+  <div class="news container-xxl">
 
     <div class="top">
       <h2>
@@ -45,7 +45,7 @@
   display: grid;
   gap: 30px;
   text-align: left;
-  padding: 90px 30px;
+  padding: 90px 30px 180px 30px;
 
   @media (max-width: 1000px){
     padding: 55px 10px 75px 10px;

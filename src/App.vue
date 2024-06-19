@@ -1,6 +1,6 @@
 <template>
   <div class="main container-fluid">
-    <div class="content container-xxl">
+    <div class="content">
       <Navbar class="navbar"/>
       <router-view/>
       <Footbar/>
@@ -36,7 +36,7 @@ body {
 
   @media (min-width: 1400px) {
     .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-      max-width: 1440px;
+      max-width: 1360px;
     }
   }
 

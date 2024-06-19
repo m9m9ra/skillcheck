@@ -23,11 +23,8 @@ body {
 }
 @media (min-width: 1400px) {
   #app .container-xxl, #app .container-xl, #app .container-lg, #app .container-md, #app .container-sm, #app .container {
-    max-width: 1440px;
+    max-width: 1360px;
   }
-}
-#app .main {
-  padding: 0;
 }
 #app .content {
   padding: 0;
@@ -39,7 +36,7 @@ body {
   display: grid;
   gap: 30px;
   text-align: left;
-  padding: 90px 30px;
+  padding: 90px 30px 180px 30px;
 }
 @media (max-width: 1000px) {
   #app .content .homeView .news {
@@ -98,12 +95,224 @@ body {
     font-size: 28px;
   }
 }
+#app .content .homeView .workForm {
+  display: grid;
+  gap: 30px;
+  text-align: left;
+  padding: 90px 30px;
+}
+@media (max-width: 1000px) {
+  #app .content .homeView .workForm {
+    padding: 55px 10px 75px 10px;
+  }
+}
+#app .content .homeView .workForm .top {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  justify-content: space-between;
+}
+@media (max-width: 1080px) {
+  #app .content .homeView .workForm .top {
+    flex-direction: column;
+    align-items: center;
+  }
+  #app .content .homeView .workForm .top img {
+    width: 100%;
+  }
+}
+#app .content .homeView .workForm .top img {
+  position: relative;
+  top: 30px;
+  min-width: 335px;
+  width: 50%;
+}
+#app .content .homeView .workForm .top .info {
+  width: 70%;
+  height: 386px;
+  background: rgb(236, 241, 247);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  #app .content .homeView .workForm .top .info {
+    width: 88%;
+    padding: 15px;
+  }
+}
+#app .content .homeView .workForm .top .info .center {
+  max-width: 410px;
+}
+#app .content .homeView .workForm .top .info .center h3 {
+  color: rgb(162, 160, 160);
+  font-size: 20px;
+}
+#app .content .homeView .workForm .top .info .center p {
+  text-align: left;
+  font-size: 28px;
+  font-weight: 700;
+}
+@media (max-width: 1000px) {
+  #app .content .homeView .workForm .top .info .center p {
+    font-size: 18px;
+  }
+}
+#app .content .homeView .workForm .bottom {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  justify-content: space-between;
+}
+@media (max-width: 1080px) {
+  #app .content .homeView .workForm .bottom {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #app .content .homeView .workForm .bottom img {
+    width: 100%;
+  }
+}
+#app .content .homeView .workForm .bottom img {
+  position: relative;
+  width: 50%;
+  min-width: 335px;
+  top: 30px;
+}
+#app .content .homeView .workForm .bottom .info {
+  width: 70%;
+  height: 386px;
+  background: rgb(236, 241, 247);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  #app .content .homeView .workForm .bottom .info {
+    width: 88%;
+    padding: 15px;
+  }
+}
+#app .content .homeView .workForm .bottom .info .center {
+  max-width: 400px;
+}
+#app .content .homeView .workForm .bottom .info .center h3 {
+  color: rgb(162, 160, 160);
+  font-size: 20px;
+}
+#app .content .homeView .workForm .bottom .info .center p {
+  font-size: 28px;
+  font-weight: 700;
+}
+@media (max-width: 1000px) {
+  #app .content .homeView .workForm .bottom .info .center p {
+    font-size: 18px;
+  }
+}
+#app .content .homeView .feeedForm {
+  display: grid;
+  gap: 30px;
+  text-align: left;
+  padding: 90px 30px;
+  background-color: rgb(20, 114, 208);
+  border-radius: 80px;
+  background-image: url("./../slide/bgFeed.png");
+  background-size: cover;
+}
+@media (max-width: 1000px) {
+  #app .content .homeView .feeedForm {
+    padding: 55px 10px 75px 10px;
+    border-radius: 20px;
+  }
+}
+#app .content .homeView .feeedForm .content .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 678px;
+  margin: 140px auto;
+  text-align: center;
+  color: #FFFFFF;
+  gap: 40px;
+}
+#app .content .homeView .feeedForm .content .bottom h1 {
+  font-size: 44px;
+  font-weight: 700;
+}
+@media (max-width: 1000px) {
+  #app .content .homeView .feeedForm .content .bottom h1 {
+    font-size: 24px;
+  }
+}
+#app .content .homeView .feeedForm .content .middle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1200px) and (min-width: 520px) {
+  #app .content .homeView .feeedForm .content .middle {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 521px) {
+  #app .content .homeView .feeedForm .content .middle {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#app .content .homeView .feeedForm .content .middle .card {
+  padding: 40px 40px 65px 40px;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#app .content .homeView .feeedForm .content .middle .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+#app .content .homeView .feeedForm .content .middle .card p {
+  font-size: 14px;
+}
+#app .content .homeView .feeedForm .content .middle .card .divider {
+  height: 20px;
+}
+#app .content .homeView .feeedForm .content .middle .current {
+  background: linear-gradient(120.99deg, #B4CDED 4.24%, #DBF1FF 95.76%);
+  color: #FFFFFF;
+}
+#app .content .homeView .feeedForm .content .top {
+  display: grid;
+  gap: 30px;
+}
+#app .content .homeView .feeedForm .content .top h2 {
+  font-size: 44px;
+  font-weight: 700;
+  max-width: 780px;
+  color: #FFFFFF;
+}
+@media (max-width: 1000px) {
+  #app .content .homeView .feeedForm .content .top h2 {
+    font-size: 28px;
+  }
+}
+#app .content .homeView .feeedForm .content .top p {
+  color: white;
+  max-width: 840px;
+}
+@media (max-width: 1000px) {
+  #app .content .homeView .feeedForm .content .top p {
+    font-size: 12px;
+  }
+}
 #app .content .homeView .feedback {
   display: grid;
   gap: 30px;
   text-align: left;
   padding: 90px 30px;
-  background-image: url("./../../assets/slide/feedbg.png");
+  background-image: url("./../slide/feedbg.png");
   background-repeat: no-repeat;
   background-position: top right;
 }
@@ -112,12 +321,50 @@ body {
     padding: 55px 10px 75px 10px;
   }
 }
+#app .content .homeView .feedback .bottom {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 890px) {
+  #app .content .homeView .feedback .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 #app .content .homeView .feedback .bottom .left {
   height: 652px;
   background-color: rgb(236, 241, 247);
   border: 1px solid rgb(236, 241, 247);
   border-radius: 40px;
   padding: 40px;
+  max-width: 652px;
+}
+@media (max-width: 440px) {
+  #app .content .homeView .feedback .bottom .left {
+    height: auto;
+  }
+}
+#app .content .homeView .feedback .bottom .left .header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#app .content .homeView .feedback .bottom .left .header .rt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 0;
+  gap: 15px;
+}
+#app .content .homeView .feedback .bottom .left .header .rt p {
+  margin: 0;
+  padding: 0;
+}
+#app .content .homeView .feedback .bottom .left .header .rt p:first-child {
+  font-weight: 700;
+  position: relative;
+  top: 10px;
+  font-size: 16px;
 }
 #app .content .homeView .feedback .bottom .left .feed h3 {
   font-size: 20px;
@@ -126,6 +373,73 @@ body {
 #app .content .homeView .feedback .bottom .left .feed p {
   font-size: 14px;
   font-weight: 400;
+}
+#app .content .homeView .feedback .bottom .right .bottom {
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#app .content .homeView .feedback .bottom .right .bottom .button {
+  display: flex;
+  gap: 20px;
+}
+#app .content .homeView .feedback .bottom .right .top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+@media (max-width: 1280px) {
+  #app .content .homeView .feedback .bottom .right .top {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#app .content .homeView .feedback .bottom .right .top .card {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 40px;
+  padding: 40px;
+}
+@media (max-width: 1280px) {
+  #app .content .homeView .feedback .bottom .right .top .card:last-child {
+    display: none;
+  }
+}
+@media (max-width: 890px) {
+  #app .content .homeView .feedback .bottom .right .top .card:first-child {
+    display: none;
+  }
+}
+#app .content .homeView .feedback .bottom .right .top .card .header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#app .content .homeView .feedback .bottom .right .top .card .header .rt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 0;
+  gap: 15px;
+}
+#app .content .homeView .feedback .bottom .right .top .card .header .rt p {
+  margin: 0;
+  padding: 0;
+}
+#app .content .homeView .feedback .bottom .right .top .card .header .rt p:first-child {
+  font-weight: 700;
+  position: relative;
+  top: 10px;
+  font-size: 16px;
+}
+#app .content .homeView .feedback .bottom .right .top .card .feed h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+#app .content .homeView .feedback .bottom .right .top .card .feed p {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: underline;
 }
 #app .content .homeView .feedback .top {
   display: grid;
@@ -191,6 +505,7 @@ body {
   #app .content .homeView .sliderTop .bottom {
     flex-direction: column;
     justify-content: space-between;
+    max-height: 740px;
   }
 }
 #app .content .homeView .sliderTop .bottom .left {
@@ -224,7 +539,7 @@ body {
   }
 }
 #app .content .homeView .sliderTop .bottom .left .slide {
-  background-image: url("./../../assets/slide/bgsl1.png");
+  background-image: url("./../slide/bgsl1.png");
   background-repeat: repeat-x;
   padding-bottom: 20px;
 }
@@ -237,27 +552,29 @@ body {
     border-radius: 0 0 40px 40px;
   }
 }
-#app .content .homeView .topBlock {
-  text-align: left;
-  background-image: url("./../../assets/slide/bgtop.png");
+#app .content .homeView .topBlockWrapper {
+  background-image: url("./../slide/bgtop.png");
   background-position: top right;
   background-repeat: no-repeat;
+}
+#app .content .homeView .topBlockWrapper .topBlock {
+  text-align: left;
   padding: 150px 30px;
   display: grid;
   gap: 30px;
 }
 @media (max-width: 1000px) {
-  #app .content .homeView .topBlock {
+  #app .content .homeView .topBlockWrapper .topBlock {
     padding: 55px 10px 75px 10px;
   }
 }
-#app .content .homeView .topBlock .cardBlock {
+#app .content .homeView .topBlockWrapper .topBlock .cardBlock {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
-#app .content .homeView .topBlock .cardBlock .card {
+#app .content .homeView .topBlockWrapper .topBlock .cardBlock .card {
   padding: 20px 50px;
   display: grid;
   gap: 40px;
@@ -265,83 +582,83 @@ body {
   border: 1px solid rgb(236, 241, 247);
   border-radius: 30px;
 }
-@media (max-width: 1400px) and (min-width: 1000px) {
-  #app .content .homeView .topBlock .cardBlock .card:last-child {
+@media (max-width: 1399px) and (min-width: 1000px) {
+  #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card:last-child {
     display: none;
   }
 }
 @media (max-width: 1000px) {
-  #app .content .homeView .topBlock .cardBlock .card {
+  #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card {
     padding: 10px 10px;
   }
-  #app .content .homeView .topBlock .cardBlock .card:last-child {
+  #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card:last-child {
     display: none;
   }
-  #app .content .homeView .topBlock .cardBlock .card:first-child {
+  #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card:first-child {
     display: none;
   }
 }
-#app .content .homeView .topBlock .cardBlock .card h3 {
+#app .content .homeView .topBlockWrapper .topBlock .cardBlock .card h3 {
   font-size: 18px;
   font-weight: 600;
 }
-#app .content .homeView .topBlock .cardBlock .card .bottom {
+#app .content .homeView .topBlockWrapper .topBlock .cardBlock .card .bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#app .content .homeView .topBlock .cardBlock .card .bottom p:first-child {
+#app .content .homeView .topBlockWrapper .topBlock .cardBlock .card .bottom p:first-child {
   font-size: 28px;
   font-weight: 600;
   color: rgb(20, 114, 208);
 }
-#app .content .homeView .topBlock .top {
+#app .content .homeView .topBlockWrapper .topBlock .top {
   display: grid;
   gap: 24px;
 }
-#app .content .homeView .topBlock .top h2 {
+#app .content .homeView .topBlockWrapper .topBlock .top h2 {
   font-size: 44px;
   font-weight: 700;
   max-width: 720px;
 }
-#app .content .homeView .topBlock .top h2 span {
+#app .content .homeView .topBlockWrapper .topBlock .top h2 span {
   color: rgb(20, 114, 208);
 }
 @media (max-width: 1000px) {
-  #app .content .homeView .topBlock .top h2 {
+  #app .content .homeView .topBlockWrapper .topBlock .top h2 {
     font-size: 28px;
   }
 }
-#app .content .homeView .topBlock .top .bottom {
+#app .content .homeView .topBlockWrapper .topBlock .top .bottom {
   display: flex;
   justify-content: space-between;
 }
-#app .content .homeView .topBlock .top .bottom p {
+#app .content .homeView .topBlockWrapper .topBlock .top .bottom p {
   max-width: 840px;
 }
 @media (max-width: 1000px) {
-  #app .content .homeView .topBlock .top .bottom p {
+  #app .content .homeView .topBlockWrapper .topBlock .top .bottom p {
     font-size: 12px;
   }
 }
-#app .content .homeView .topBlock .top .bottom .button {
+#app .content .homeView .topBlockWrapper .topBlock .top .bottom .button {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-#app .content .homeView .topBlock .top .bottom .button img {
+#app .content .homeView .topBlockWrapper .topBlock .top .bottom .button img {
   cursor: pointer;
 }
 @media (max-width: 1111px) {
-  #app .content .homeView .topBlock .top .bottom .button {
+  #app .content .homeView .topBlockWrapper .topBlock .top .bottom .button {
     display: none;
   }
 }
-#app .content .homeView .topBlock .bottom-mobile {
+#app .content .homeView .topBlockWrapper .topBlock .bottom-mobile {
   display: none;
 }
 @media (max-width: 1000px) {
-  #app .content .homeView .topBlock .bottom-mobile {
+  #app .content .homeView .topBlockWrapper .topBlock .bottom-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -349,11 +666,14 @@ body {
     margin-top: 30px;
   }
 }
-#app .content .homeView .content {
-  background-image: url("./../../assets/slide/main.jpg");
+#app .content .homeView .wrapper {
+  background-image: url("./../slide/main.png");
+  background-size: cover;
+}
+#app .content .homeView .wrapper .content {
   height: 830px;
 }
-#app .content .homeView .content .left {
+#app .content .homeView .wrapper .content .left {
   text-align: left;
   padding: 40px 50px;
   display: flex;
@@ -364,56 +684,154 @@ body {
   gap: 40px;
 }
 @media (max-width: 900px) {
-  #app .content .homeView .content .left {
+  #app .content .homeView .wrapper .content .left {
     padding: 30px 13px;
     padding-top: 190px;
   }
 }
 @media (max-width: 900px) {
-  #app .content .homeView .content .left {
+  #app .content .homeView .wrapper .content .left {
     justify-content: space-between;
   }
 }
-#app .content .homeView .content .left h1 {
+#app .content .homeView .wrapper .content .left h1 {
   font-size: 44px;
   font-weight: 700;
 }
-#app .content .homeView .content .left h1 span {
+#app .content .homeView .wrapper .content .left h1 span {
   color: rgb(20, 114, 208);
 }
-#app .content .homeView .content .left h1 p {
+#app .content .homeView .wrapper .content .left h1 p {
   display: none;
 }
 @media (max-width: 600px) {
-  #app .content .homeView .content .left h1 {
+  #app .content .homeView .wrapper .content .left h1 {
     font-size: 28px;
   }
-  #app .content .homeView .content .left h1 p {
+  #app .content .homeView .wrapper .content .left h1 p {
     display: block;
     margin-top: 20px;
     font-size: 12px;
     font-weight: 400;
   }
 }
-#app .content .homeView .content .left h3 {
+#app .content .homeView .wrapper .content .left h3 {
   font-size: 20px;
   font-weight: 400;
 }
 @media (max-width: 600px) {
-  #app .content .homeView .content .left h3 {
+  #app .content .homeView .wrapper .content .left h3 {
     font-size: 12px;
     display: none;
   }
 }
-#app .content .homeView .content .left .button {
+#app .content .homeView .wrapper .content .left .button {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 @media (max-width: 900px) {
-  #app .content .homeView .content .left .button {
+  #app .content .homeView .wrapper .content .left .button {
     height: 20%;
   }
+}
+#app .content .footbar-fluid {
+  background-color: rgb(20, 114, 208);
+  min-height: 535px;
+  background-image: url("./../svg/footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+#app .content .footbar-fluid .footbar .divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.28);
+}
+#app .content .footbar-fluid .footbar .top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding: 60px 40px;
+}
+#app .content .footbar-fluid .footbar .top svg:first-child {
+  display: none;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .top {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px 0;
+  }
+  #app .content .footbar-fluid .footbar .top svg:last-child {
+    display: none;
+  }
+  #app .content .footbar-fluid .footbar .top svg:first-child {
+    display: block;
+  }
+}
+#app .content .footbar-fluid .footbar .top .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+}
+#app .content .footbar-fluid .footbar .top .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .content .footbar-fluid .footbar .bottom {
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1199px) and (min-width: 901px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 0;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide {
+  display: none;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .slide {
+    display: flex;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide h3 {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+#app .content .footbar-fluid .footbar .bottom .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+  max-width: 247px;
+  display: grid;
+  gap: 14px;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .card {
+    display: none;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 #app .content .appbar {
   position: absolute;
@@ -477,6 +895,9 @@ body {
     border-radius: 3px;
     background: #000;
   }
+}
+#app .main {
+  padding: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

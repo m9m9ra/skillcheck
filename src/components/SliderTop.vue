@@ -1,5 +1,5 @@
 <template>
-  <div class="sliderTop">
+  <div class="sliderTop container-xxl">
     <div class="top">
       <h2>
         НАШИ СИСТЕМЫ ОЧИСТКИ ВОДЫ
@@ -92,6 +92,7 @@
     @media (max-width: 1270px) {
       flex-direction: column;
       justify-content: space-between;
+      max-height: 740px;
     }
 
     .left {
