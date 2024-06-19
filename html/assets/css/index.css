@@ -383,6 +383,11 @@ body {
   align-items: flex-end;
   justify-content: space-between;
 }
+@media (max-width: 1000px) {
+  #app .content .homeView .feedback .bottom .right .bottom {
+    height: auto;
+  }
+}
 #app .content .homeView .feedback .bottom .right .bottom .button {
   display: flex;
   gap: 20px;

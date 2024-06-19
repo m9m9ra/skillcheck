@@ -211,6 +211,10 @@
         align-items: flex-end;
         justify-content: space-between;
 
+        @media (max-width: 1000px) {
+          height: auto;
+        }
+
         .button {
           display: flex;
           gap: 20px;
