@@ -718,9 +718,13 @@ body {
     margin-top: 30px;
   }
 }
-#app .content .homeView .wrapper {
-  background-image: url("./../slide/main.png");
-  background-size: cover;
+#app .content .homeView .wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 830px;
+  z-index: -10;
 }
 #app .content .homeView .wrapper .content {
   height: 830px;

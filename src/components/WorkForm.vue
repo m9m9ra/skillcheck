@@ -1,29 +1,31 @@
 <template>
-  <div class="workForm container-xxl">
-    <div class="top">
-      <img src="../assets/slide/topLeft.png"/>
-      <div class="info">
-        <div class="center">
-          <h3>ПАВЕЛ МАЛЬШУКОВ</h3>
-          <p>
-            СТАТЬ ДИЛЛЕРОМ ИЛИ МОНТАЖНИКОМ КОМПАНИИ КАПЛЯ39 В РОССИИ
-          </p>
-          <button type="button" class="btn btn-primary">ОТПРАВИТЬ ЗАЯВКУ</button>
+  <div class="container-fluid" style="background-color: #FFFFFF;">
+    <div class="workForm container-xxl">
+      <div class="top">
+        <img src="../assets/slide/topLeft.png"/>
+        <div class="info">
+          <div class="center">
+            <h3>ПАВЕЛ МАЛЬШУКОВ</h3>
+            <p>
+              СТАТЬ ДИЛЛЕРОМ ИЛИ МОНТАЖНИКОМ КОМПАНИИ КАПЛЯ39 В РОССИИ
+            </p>
+            <button type="button" class="btn btn-primary">ОТПРАВИТЬ ЗАЯВКУ</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="bottom">
-      <div class="info">
-        <div class="center">
-          <h3>АНАСТАСИЯ АРЕФЬЕВА</h3>
-          <p>
-            ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ СПЕЦИАЛИСТА ПО ВОДОПОДГОТОВКЕ
-          </p>
-          <button type="button" class="btn btn-primary">ОБРАТНЫЙ ЗВОНОК</button>
+      <div class="bottom">
+        <div class="info">
+          <div class="center">
+            <h3>АНАСТАСИЯ АРЕФЬЕВА</h3>
+            <p>
+              ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ СПЕЦИАЛИСТА ПО ВОДОПОДГОТОВКЕ
+            </p>
+            <button type="button" class="btn btn-primary">ОБРАТНЫЙ ЗВОНОК</button>
+          </div>
         </div>
+        <img src="../assets/slide/bottom.png"/>
       </div>
-      <img src="../assets/slide/bottom.png"/>
     </div>
   </div>
 </template>
@@ -34,9 +36,9 @@
 <style scoped lang="scss">
 .workForm {
   display: grid;
-  gap: 30px;
   text-align: left;
-  padding: 90px 30px;
+  padding: 20px 30px;
+  background-color: #FFFFFF;
 
   @media (max-width: 1000px){
     padding: 55px 10px 75px 10px;
@@ -47,6 +49,7 @@
     align-items: flex-end;
     gap: 20px;
     justify-content: space-between;
+    position: relative;
 
     @media (max-width: 1080px) {
       flex-direction: column;
@@ -105,6 +108,8 @@
     align-items: flex-end;
     gap: 20px;
     justify-content: space-between;
+    position: relative;
+    bottom: 40px;
 
     @media (max-width: 1080px){
       flex-direction: column-reverse;

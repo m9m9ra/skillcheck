@@ -11,14 +11,14 @@
         <h3>Гарантия чистой воды</h3>
 
         <div class="button">
-          <img src="../assets/svg/buttonL.png" height="70" width="70"/>
-          <img src="../assets/svg/buttonR.png" height="70" width="70"/>
+<!--          <img src="../assets/svg/buttonL.png" height="70" width="70"/>-->
+<!--          <img src="../assets/svg/buttonR.png" height="70" width="70"/>-->
         </div>
       </div>
     </div>
-<!--    <video playsinline autoplay muted loop>-->
-<!--      <source src="./../assets/slide/bg.mp4" type="video/mp4">-->
-<!--    </video>-->
+    <video playsinline autoplay muted loop>
+      <source src="./../assets/slide/bg.mp4" type="video/mp4">
+    </video>
   </div>
 
 </template>
@@ -28,18 +28,33 @@
 </script>
 <style scoped lang="scss">
 .wrapper {
-  background-image: url("./../assets/slide/main.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  //video {
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  min-width: 100%;
-  //  height: 830px;
-  //  z-index: -10;
-  //}
+  //background-image: url("./../assets/slide/main.png");
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  video {
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    //min-width: 100%;
+    //height: 830px;
+    //z-index: -10;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+    object-fit: cover;
+
+    //@media (max-width: 1280px) {
+    //  width: auto;
+    //  height: 100%;
+    //  overflow: hidden;
+    //}
+  }
 
   .content {
     height: 830px;

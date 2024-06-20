@@ -58,6 +58,7 @@
 </script>
 <style scoped lang="scss">
 .topBlockWrapper {
+  background-color: #FFFFFF;
   background-image: url("./../assets/slide/bgtop.png");
   background-position: top right;
   background-repeat: no-repeat;
@@ -67,6 +68,12 @@
     padding: 150px 30px 60px 30px;
     display: grid;
     gap: 30px;
+    animation: fadeIn 5s;
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
 
 
     @media (max-width: 1000px){
@@ -133,6 +140,7 @@
         font-size: 44px;
         font-weight: 700;
         max-width: 720px;
+        text-transform: uppercase;
 
         span {
           color: rgba(20, 114, 208, 1);

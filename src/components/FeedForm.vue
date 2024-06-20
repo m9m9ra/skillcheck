@@ -1,66 +1,68 @@
 <template>
-  <div class="feeedForm container-fluid">
-    <div class="content container-xxl">
-      <div class="top">
-        <h2>
-          ЧТО ЕЩЁ ВЫ ПОЛУЧИТЕ РАБОТАЯ С НАМИ?
-        </h2>
-        <p>
-          Свои поставки химии и оборудования для очистки промышленной и питьевой воды с 2007 года и своя складская программа.
-          Поставляем напрямую из Китая, Индии и России.
-          Поставили сотни работающих систем от Санкт-Петербурга до Барнаула.
-        </p>
-      </div>
-
-      <div class="middle">
-        <div class="card">
-          <img src="../assets/formCard/01.png" height="60" width="60"/>
-          <div class="divider"></div>
-          <h3>ПРОВЕРЕННЫЕ БРЕНДЫ</h3>
-          <p>Выбор основан на опыте поставок с 2007г.</p>
+  <div class="container-fluid" style="background-color: white; padding: 0;margin: 0;">
+    <div class="feeedForm">
+      <div class="content container-xxl">
+        <div class="top">
+          <h2>
+            ЧТО ЕЩЁ ВЫ ПОЛУЧИТЕ РАБОТАЯ С НАМИ?
+          </h2>
+          <p>
+            Свои поставки химии и оборудования для очистки промышленной и питьевой воды с 2007 года и своя складская программа.
+            Поставляем напрямую из Китая, Индии и России.
+            Поставили сотни работающих систем от Санкт-Петербурга до Барнаула.
+          </p>
         </div>
 
-        <div class="current card">
-          <img src="../assets/formCard/02.png" height="60" width="60"/>
-          <div class="divider"></div>
-          <h3>ЦЕНЫ НИЖЕ РЫНОЧНЫХ</h3>
-          <p>Прямые поставки без посредников</p>
+        <div class="middle">
+          <div class="card">
+            <img src="../assets/formCard/01.png" height="60" width="60"/>
+            <div class="divider"></div>
+            <h3>ПРОВЕРЕННЫЕ БРЕНДЫ</h3>
+            <p>Выбор основан на опыте поставок с 2007г.</p>
+          </div>
+
+          <div class="current card">
+            <img src="../assets/formCard/02.png" height="60" width="60"/>
+            <div class="divider"></div>
+            <h3>ЦЕНЫ НИЖЕ РЫНОЧНЫХ</h3>
+            <p>Прямые поставки без посредников</p>
+          </div>
+
+          <div class="card">
+            <img src="../assets/formCard/03.png" height="60" width="60"/>
+            <div class="divider"></div>
+            <h3>ОТГРУЗКА В ДЕНЬ ЗАЯВКИ</h3>
+            <p>Отлаженная логистическая сеть</p>
+          </div>
+
+          <div class="card">
+            <img src="../assets/formCard/04.png" height="60" width="60"/>
+            <div class="divider"></div>
+            <h3>НАЛИЧИЕ</h3>
+            <p>Вся продукция всегда на складе</p>
+          </div>
+
+          <div class="card">
+            <img src="../assets/formCard/05.png" height="60" width="60"/>
+            <div class="divider"></div>
+            <h3>ОПТИМАЛЬНЫЙ КОМПЛЕКТ</h3>
+            <p>Более 14-ти лет помогаем собирать системы очистки</p>
+          </div>
+
+          <div class="card">
+            <img src="../assets/formCard/06.png" height="60" width="60"/>
+            <div class="divider"></div>
+            <h3>ГАРАНТИЯ</h3>
+            <p>При заказе оборудования гарантия 1 год.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../assets/formCard/03.png" height="60" width="60"/>
-          <div class="divider"></div>
-          <h3>ОТГРУЗКА В ДЕНЬ ЗАЯВКИ</h3>
-          <p>Отлаженная логистическая сеть</p>
+        <div class="bottom">
+          <h1>
+            БЕСПЛАТНО ПОДБЕРЁМ ОБОРУДОВАНИЕ ДЛЯ ВАШЕГО ДОМА ИЛИ КВАРТИРЫ
+          </h1>
+          <button type="button" class="btn btn-light" style="color: rgba(20, 114, 208, 1); padding: 14px 33px; font-weight: 700;">ОСТАВИТЬ ЗАЯВКУ</button>
         </div>
-
-        <div class="card">
-          <img src="../assets/formCard/04.png" height="60" width="60"/>
-          <div class="divider"></div>
-          <h3>НАЛИЧИЕ</h3>
-          <p>Вся продукция всегда на складе</p>
-        </div>
-
-        <div class="card">
-          <img src="../assets/formCard/05.png" height="60" width="60"/>
-          <div class="divider"></div>
-          <h3>ОПТИМАЛЬНЫЙ КОМПЛЕКТ</h3>
-          <p>Более 14-ти лет помогаем собирать системы очистки</p>
-        </div>
-
-        <div class="card">
-          <img src="../assets/formCard/06.png" height="60" width="60"/>
-          <div class="divider"></div>
-          <h3>ГАРАНТИЯ</h3>
-          <p>При заказе оборудования гарантия 1 год.</p>
-        </div>
-      </div>
-
-      <div class="bottom">
-        <h1>
-          БЕСПЛАТНО ПОДБЕРЁМ ОБОРУДОВАНИЕ ДЛЯ ВАШЕГО ДОМА ИЛИ КВАРТИРЫ
-        </h1>
-        <button type="button" class="btn btn-light" style="color: rgba(20, 114, 208, 1); padding: 14px 33px; font-weight: 700;">ОСТАВИТЬ ЗАЯВКУ</button>
       </div>
     </div>
   </div>
@@ -85,7 +87,6 @@
   @media (max-width: 1000px){
     padding: 55px 10px 75px 10px;
     border-radius: 20px;
-    background-size: contain;
   }
 
   .content {

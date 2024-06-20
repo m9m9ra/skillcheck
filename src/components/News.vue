@@ -1,40 +1,42 @@
 <template>
-  <div class="news container-xxl">
+  <div class="container-fluid" style="background-color: #FFFFFF;">
+    <div class="news container-xxl">
 
-    <div class="top">
-      <h2>
-        НОВОСТИ
-      </h2>
+      <div class="top">
+        <h2>
+          НОВОСТИ
+        </h2>
+      </div>
+
+      <div class="bottom">
+
+        <div class="card">
+          <img src="../assets/card/card1.png"/>
+          <h4>03.05.2024</h4>
+          <p>Вода из-под крана или вода бутилированная: что выбираете вы?</p>
+        </div>
+
+        <div class="card">
+          <img src="../assets/card/card2.png"/>
+          <h4>03.05.2024</h4>
+          <p>Вода из-под крана или вода бутилированная: что выбираете вы?</p>
+        </div>
+
+        <div class="card">
+          <img src="../assets/card/card3.png"/>
+          <h4>03.05.2024</h4>
+          <p>Выбираем систему очистки воды: 5 главных «нельзя»</p>
+        </div>
+
+        <div class="card">
+          <img src="../assets/card/card4.png"/>
+          <h4>03.05.2024</h4>
+          <p>Выбираем систему очистки воды: 5 главных «нельзя»</p>
+        </div>
+
+      </div>
+
     </div>
-
-    <div class="bottom">
-
-      <div class="card">
-        <img src="../assets/card/card1.png"/>
-        <h4>03.05.2024</h4>
-        <p>Вода из-под крана или вода бутилированная: что выбираете вы?</p>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card/card2.png"/>
-        <h4>03.05.2024</h4>
-        <p>Вода из-под крана или вода бутилированная: что выбираете вы?</p>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card/card3.png"/>
-        <h4>03.05.2024</h4>
-        <p>Выбираем систему очистки воды: 5 главных «нельзя»</p>
-      </div>
-
-      <div class="card">
-        <img src="../assets/card/card4.png"/>
-        <h4>03.05.2024</h4>
-        <p>Выбираем систему очистки воды: 5 главных «нельзя»</p>
-      </div>
-
-    </div>
-
   </div>
 </template>
 <script setup>
