@@ -2,7 +2,7 @@
   <div class="container-fluid" style="background-color: white; padding: 0;margin: 0;">
     <div class="feeedForm">
       <div class="content container-xxl">
-        <div class="top">
+        <div :class="`${animated ? 'animated animatedFadeInUp fadeInUp' : false} top`" :style="`display: ${animated ? 'grid' : `none`}`">
           <h2>
             ЧТО ЕЩЁ ВЫ ПОЛУЧИТЕ РАБОТАЯ С НАМИ?
           </h2>
@@ -13,7 +13,7 @@
           </p>
         </div>
 
-        <div class="middle">
+        <div :class="`${animatedBottom ? 'animated animatedFadeInUp fadeInUp' : false} middle`" :style="`display: ${animatedBottom ? 'grid' : `none`}`">
           <div class="card">
             <img src="../assets/formCard/01.png" height="60" width="60"/>
             <div class="divider"></div>
@@ -68,7 +68,23 @@
   </div>
 </template>
 <script setup>
+import {onMounted, ref} from "vue";
 
+const animated = ref(false);
+const animatedBottom = ref(false);
+
+onMounted(() => {
+  document.addEventListener(`scroll`, (e) => {
+    const windowScroll = window.scrollY;
+    if (windowScroll > 2900 ) {
+      animated.value = true;
+    }
+    if (windowScroll > 3040 ) {
+      animatedBottom.value = true;
+    }
+
+  })
+})
 
 </script>
 <style scoped lang="scss">
@@ -84,9 +100,12 @@
   background-position: bottom center;
   //background-size: ;
 
-  @media (max-width: 1000px){
-    padding: 55px 10px 75px 10px;
+  @media (max-width: 750px){
+    padding: 55px 10px 0px 10px;
     border-radius: 20px;
+    background-image: url("./../assets/slide/fon_mob.png");
+    background-size: contain;
+    background-position-y: 120%;
   }
 
   .content {
@@ -156,7 +175,7 @@
 
     .top {
       display: grid;
-      gap: 30px;
+      gap: 40px;
 
       h2 {
         font-size: 44px;
@@ -170,6 +189,7 @@
       }
 
       p {
+        line-height: 20px;
         color: white;
         max-width: 840px;
         @media (max-width: 1000px){

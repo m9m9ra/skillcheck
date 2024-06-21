@@ -2,13 +2,13 @@
   <div class="container-fluid" style="background-color: #FFFFFF;">
     <div class="news container-xxl">
 
-      <div class="top">
+      <div :class="`${animated ? 'animated animatedFadeInUp fadeInUp' : false} top`" :style="`display: ${animated ? 'block' : `none`}`">
         <h2>
           НОВОСТИ
         </h2>
       </div>
 
-      <div class="bottom">
+      <div :class="`${animatedBottom ? 'animated animatedFadeInUp fadeInUp' : false} bottom`" :style="`display: ${animatedBottom ? 'grid' : `none`}`">
 
         <div class="card">
           <img src="../assets/card/card1.png"/>
@@ -40,6 +40,23 @@
   </div>
 </template>
 <script setup>
+import {onMounted, ref} from "vue";
+
+const animated = ref(false);
+const animatedBottom = ref(false);
+
+onMounted(() => {
+  document.addEventListener(`scroll`, (e) => {
+    const windowScroll = window.scrollY;
+    if (windowScroll > 5500 ) {
+      animated.value = true;
+    }
+    if (windowScroll > 5700 ) {
+      animatedBottom.value = true;
+    }
+
+  })
+})
 
 </script>
 <style scoped lang="scss">

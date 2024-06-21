@@ -61,18 +61,20 @@
 </script>
 <style lang="scss" scoped>
 .appbar {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   display: flex;
+  z-index: 120;
+  background-color: #FFFFFF;
 
   .navbar-custom {
     display: flex;
     align-items: center;
-    padding: 30px 50px;
+    padding: 10px 50px;
 
     @media (max-width: 900px) {
-      padding: 20px 13px;
+      padding: 10px 13px;
     }
 
     ul {

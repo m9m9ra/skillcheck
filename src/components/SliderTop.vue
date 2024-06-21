@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid" style="background-color: #FFFFFF;">
     <div class="sliderTop container-xxl">
-      <div class="top">
+      <div :class="`${animated ? 'animated animatedFadeInUp fadeInUp' : false} top`" :style="`display: ${animated ? 'block' : `none`}`" >
         <h2>
           НАШИ СИСТЕМЫ ОЧИСТКИ ВОДЫ
           <span>ПОМОГУТ РЕШИТЬ ПРОБЛЕМЫ</span>
@@ -13,7 +13,7 @@
           обеспечение качественной водой.
         </p>
       </div>
-      <div class="bottom">
+      <div :class="`${animatedBottom ? 'animated animatedFadeInUp fadeInUp' : false} bottom`" :style="`display: ${animatedBottom ? 'flex' : `none`}`">
         <div class="left">
           <h3>ПРЕВЫШЕНИЕ СОДЕРЖАНИЯ СЕРОВОДОРОДА</h3>
           <p>
@@ -53,7 +53,23 @@
   </div>
 </template>
 <script setup>
+import {onMounted, ref} from "vue";
 
+const animated = ref(false);
+const animatedBottom = ref(false);
+
+onMounted(() => {
+  document.addEventListener(`scroll`, (e) => {
+    const windowScroll = window.scrollY;
+    if (windowScroll > 1100 ) {
+      animated.value = true;
+    }
+    if (windowScroll > 1200 ) {
+      animatedBottom.value = true;
+    }
+
+  })
+})
 
 </script>
 <style scoped lang="scss">
