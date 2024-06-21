@@ -10,7 +10,7 @@
 
       <div :class="`${animatedBottom ? 'animated animatedFadeInUp fadeInUp' : false} bottom`" :style="`display: ${animatedBottom ? 'grid' : `none`}`">
 
-        <div class="card">
+        <div :class="`${animatedBottom ? 'animated animatedFadeInUp fadeInUp' : false} card`">
           <img src="../assets/card/card1.png"/>
           <h4>03.05.2024</h4>
           <p>Вода из-под крана или вода бутилированная: что выбираете вы?</p>
@@ -22,7 +22,7 @@
           <p>Вода из-под крана или вода бутилированная: что выбираете вы?</p>
         </div>
 
-        <div class="card">
+        <div :class="`${animatedBottom ? 'animated animatedFadeInUp fadeInUp' : false} card`">
           <img src="../assets/card/card3.png"/>
           <h4>03.05.2024</h4>
           <p>Выбираем систему очистки воды: 5 главных «нельзя»</p>
@@ -90,6 +90,13 @@ onMounted(() => {
 
       img {
         width: 100%;
+
+        @media (max-width: 900px) {
+          height: 70%;
+          object-fit: cover;
+          object-position: 0 0;
+          border-radius: 20px;
+        }
       }
 
       h4 {
@@ -97,12 +104,22 @@ onMounted(() => {
         color: rgba(162, 160, 160, 1);
         margin: 0;
         padding: 0;
+
+        @media (max-width: 900px) {
+          position: relative;
+          bottom: 50px;
+        }
       }
       p {
         margin: 0;
         padding: 0;
         font-size: 16px;
         font-weight: 700;
+
+        @media (max-width: 900px) {
+          position: relative;
+          bottom: 50px;
+        }
       }
     }
   }

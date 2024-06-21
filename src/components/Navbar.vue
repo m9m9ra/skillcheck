@@ -1,5 +1,5 @@
 <template>
-  <div class="appbar">
+  <div class="appbar" :style="animated ? `background: #FFF;` : ``">
     <div class="navbar-custom container-xxl">
       <div class="logo">
         <svg width="128" height="30" viewBox="0 0 128 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,21 @@
   </div>
 </template>
 <script setup>
+import {onMounted, ref} from "vue";
 
+const animated = ref(false);
+
+onMounted(() => {
+  document.addEventListener(`scroll`, (e) => {
+    const windowScroll = window.scrollY;
+    if (windowScroll > 140 ) {
+      animated.value = true;
+    } else {
+      animated.value = false;
+    }
+
+  })
+})
 </script>
 <style lang="scss" scoped>
 .appbar {
@@ -66,7 +80,8 @@
   right: 0;
   display: flex;
   z-index: 120;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 1.5s;
 
   .navbar-custom {
     display: flex;

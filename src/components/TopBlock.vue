@@ -1,7 +1,7 @@
 <template>
   <div class="topBlockWrapper">
     <div class="topBlock container-xxl">
-      <div class="top">
+      <div :class="`${animated ? 'animated animatedFadeInUp fadeInUp' : false} top`" :style="`display: ${animated ? 'block' : `none`}`">
         <h2><span>Оптимальные решения</span> под любой бюджет</h2>
         <div class="bottom">
           <p>
@@ -11,8 +11,6 @@
             для обеспечение качественной водой.
           </p>
           <div class="button">
-<!--            <img src="../assets/svg/buttonLB.png" height="70" width="70"/>-->
-<!--            <img src="../assets/svg/buttonRB.png" height="70" width="70"/>-->
             <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="70" height="70" rx="35" fill="#2F2F2F"/>
               <path d="M50 36.5C50.8284 36.5 51.5 35.8284 51.5 35C51.5 34.1716 50.8284 33.5 50 33.5V36.5ZM18.9393 33.9393C18.3536 34.5251 18.3536 35.4749 18.9393 36.0607L28.4853 45.6066C29.0711 46.1924 30.0208 46.1924 30.6066 45.6066C31.1924 45.0208 31.1924 44.0711 30.6066 43.4853L22.1213 35L30.6066 26.5147C31.1924 25.9289 31.1924 24.9792 30.6066 24.3934C30.0208 23.8076 29.0711 23.8076 28.4853 24.3934L18.9393 33.9393ZM50 33.5H20V36.5H50V33.5Z" fill="white"/>
@@ -25,14 +23,14 @@
           </div>
         </div>
       </div>
-      <div class="cardBlock">
+      <div :class="`${animatedBottom ? 'animated animatedFadeInUp fadeInUp' : false} cardBlock`" :style="`display: ${animatedBottom ? 'flex' : `none`}`">
 
         <div class="card">
           <img src="../assets/svg/cardImg.png" width="328" height="279"/>
           <h3>СИСТЕМА ОБЕЗЖЕЛЕЗИВАНИЯ ВОДЫ «ЭКОНОМ»</h3>
           <div class="bottom">
             <p>28 985₽</p>
-            <p>ПОДРОБНЕЕ</p>
+            <p>ПОДРОБНЕЕ →</p>
           </div>
         </div>
 
@@ -41,7 +39,7 @@
           <h3>СИСТЕМА комплексной очистки городской воды</h3>
           <div class="bottom">
             <p>34 960₽</p>
-            <p>ПОДРОБНЕЕ</p>
+            <p>ПОДРОБНЕЕ →</p>
           </div>
         </div>
 
@@ -50,7 +48,7 @@
           <h3>СИСТЕМА комплексной очистки «норма»</h3>
           <div class="bottom">
             <p>38 910₽</p>
-            <p>ПОДРОБНЕЕ </p>
+            <p>ПОДРОБНЕЕ →</p>
           </div>
         </div>
 
@@ -72,7 +70,23 @@
   </div>
 </template>
 <script setup>
+import {onMounted, ref} from "vue";
 
+const animated = ref(false);
+const animatedBottom = ref(false);
+
+onMounted(() => {
+  document.addEventListener(`scroll`, (e) => {
+    const windowScroll = window.scrollY;
+    if (windowScroll > 350 ) {
+      animated.value = true;
+    }
+    if (windowScroll > 600 ) {
+      animatedBottom.value = true;
+    }
+
+  })
+})
 </script>
 <style scoped lang="scss">
 .topBlockWrapper {
@@ -81,12 +95,16 @@
   background-position: top right;
   background-repeat: no-repeat;
 
+  @media (max-width: 1100px) {
+    background-size: contain;
+  }
+
   .topBlock {
     text-align: left;
     padding: 150px 30px 60px 30px;
     display: grid;
     gap: 30px;
-    animation: fadeIn 5s;
+    animation: fadeIn 1s;
 
     @keyframes fadeIn {
       0% { opacity: 0; }
@@ -114,6 +132,7 @@
         background-color: rgba(236, 241, 247, 1);
         border: 1px solid rgba(236, 241, 247, 1);
         border-radius: 30px;
+        transition: 1.1s;
 
         @media (max-width: 1399px) and (min-width: 1000px){
           &:last-child {
@@ -134,6 +153,7 @@
         h3 {
           font-size: 18px;
           font-weight: 600;
+          text-transform: uppercase;
         }
 
         .bottom {
@@ -145,6 +165,19 @@
             font-size: 28px;
             font-weight: 600;
             color: rgba(20, 114, 208, 1);
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(20, 114, 208, 1);
+          color: #FFFFFF;
+
+          .bottom {
+            transition: 1.2s;
+            p {
+              color: #FFFFFF;
+            }
           }
         }
       }
@@ -174,7 +207,7 @@
         justify-content: space-between;
 
         p {
-          max-width: 840px;
+          max-width: 940px;
           @media (max-width: 1000px){
             font-size: 12px;
           }
@@ -185,8 +218,12 @@
           align-items: center;
           gap: 20px;
 
-          img {
+          svg {
             cursor: pointer;
+
+            &:hover {
+              scale: 1.1;
+            }
           }
 
           @media (max-width: 1111px){
