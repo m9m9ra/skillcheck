@@ -32,7 +32,7 @@
         <li>РАСХОДНИКИ</li>
         <li>МОНТАЖ</li>
         <li>КОМПАНИЯ</li>
-        <li>КОНТАКТЫ</li>
+        <li><a href="/contacts">КОНТАКТЫ</a></li>
       </ul>
 
       <div class="contacts">
@@ -82,6 +82,7 @@ onMounted(() => {
   z-index: 120;
   background-color: rgba(255, 255, 255, 0);
   transition: 1.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 
   .navbar-custom {
     display: flex;
@@ -104,6 +105,22 @@ onMounted(() => {
       li {
         font-size: 14px;
         font-weight: 500;
+
+        a:active,
+        a:hover,
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        a:active {
+          color: rgba(20, 114, 208, 1);
+        }
+
+        a:hover {
+          cursor: pointer;
+          color: rgba(20, 114, 208, 1);
+        }
       }
 
       @media (max-width: 1000px) {

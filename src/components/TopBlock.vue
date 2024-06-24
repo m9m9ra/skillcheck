@@ -132,7 +132,7 @@ onMounted(() => {
         background-color: rgba(236, 241, 247, 1);
         border: 1px solid rgba(236, 241, 247, 1);
         border-radius: 30px;
-        transition: 1.1s;
+        transition: 0.3s;
 
         @media (max-width: 1399px) and (min-width: 1000px){
           &:last-child {
