@@ -32,7 +32,7 @@
         <li>РАСХОДНИКИ</li>
         <li>МОНТАЖ</li>
         <li>КОМПАНИЯ</li>
-        <li><a href="/contacts">КОНТАКТЫ</a></li>
+        <li><a @click.prevent="$router.push(`/contacts`)">КОНТАКТЫ</a></li>
       </ul>
 
       <div class="contacts">

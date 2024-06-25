@@ -1,0 +1,398 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-xxl {
+  padding: 0;
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  font-family: "Inter", Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+@media (min-width: 1400px) {
+  #app .container-xxl, #app .container-xl, #app .container-lg, #app .container-md, #app .container-sm, #app .container {
+    max-width: 1360px;
+  }
+}
+#app .content {
+  padding: 0;
+}
+#app .content .contacts {
+  display: grid;
+  gap: 100px;
+  padding: 114px 40px 100px 40px;
+  text-align: left;
+  max-width: 1360px;
+}
+@media (max-width: 1180px) {
+  #app .content .contacts {
+    padding: 114px 10px 100px 10px;
+    gap: 20px;
+  }
+}
+#app .content .contacts .header h1 {
+  font-weight: 700;
+  color: rgb(47, 47, 47);
+  font-size: 44px;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .header h1 {
+    margin-top: 20px;
+  }
+}
+#app .content .contacts .header h3 {
+  font-size: 12px;
+  color: rgb(162, 160, 160);
+  font-weight: 200;
+}
+#app .content .contacts .header h3 span {
+  color: rgb(47, 47, 47);
+}
+#app .content .contacts .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 1180px) {
+  #app .content .contacts .top {
+    flex-direction: column;
+    gap: 20px;
+    align-items: normal;
+  }
+}
+#app .content .contacts .top .left {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 60%;
+  grid-row-gap: 60px;
+}
+@media (max-width: 1180px) and (min-width: 550px) {
+  #app .content .contacts .top .left {
+    width: 100%;
+  }
+}
+@media (max-width: 549px) {
+  #app .content .contacts .top .left {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+  }
+}
+#app .content .contacts .top .left .card {
+  border: none;
+  max-width: 300px;
+}
+#app .content .contacts .top .left .card h4 {
+  text-transform: uppercase;
+  color: rgb(20, 114, 208);
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+}
+#app .content .contacts .top .left .card p {
+  color: rgb(47, 47, 47);
+  font-size: 14px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 8px;
+}
+#app .content .contacts .top .left .card p a:active,
+#app .content .contacts .top .left .card p a:hover,
+#app .content .contacts .top .left .card p a {
+  text-decoration: none;
+  color: rgb(20, 114, 208);
+}
+#app .content .contacts .top .left .card p a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .contacts .top .left .card p a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
+}
+#app .content .contacts .top .left .card .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 220px;
+}
+#app .content .contacts .top .left .card .info h6 {
+  margin: 0;
+  padding: 0;
+}
+#app .content .contacts .top .left .card .info p {
+  margin: 0;
+  padding: 0;
+}
+#app .content .contacts .top .right {
+  max-height: 429px;
+  width: 64%;
+  border-radius: 40px;
+  overflow: hidden;
+  clip-path: url(#c1);
+}
+@media (max-width: 1180px) {
+  #app .content .contacts .top .right {
+    width: 88vw;
+    border-radius: 20px;
+  }
+}
+#app .content .contacts .bottom {
+  height: 386px;
+  background: linear-gradient(120.99deg, #B4CDED 4.24%, #DBF1FF 95.76%);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1180px) {
+  #app .content .contacts .bottom {
+    flex-direction: column;
+    gap: 100px;
+    height: 100%;
+    display: none;
+  }
+}
+#app .content .contacts .bottom .left {
+  width: 34%;
+}
+@media (max-width: 1180px) {
+  #app .content .contacts .bottom .left {
+    width: 100%;
+  }
+}
+#app .content .contacts .bottom .left img {
+  position: relative;
+  bottom: 44px;
+  right: 40px;
+}
+#app .content .contacts .bottom .right {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1180px) {
+  #app .content .contacts .bottom .right {
+    width: 100%;
+  }
+}
+#app .content .contacts .bottom .right .center {
+  width: 527px;
+}
+#app .content .contacts .bottom .right .center h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+}
+#app .content .contacts .bottom .right .center p {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 700;
+}
+#app .content .contacts .bottom .right .center p span {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 120;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 1.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+#app .content .appbar .navbar-custom {
+  display: flex;
+  align-items: center;
+  padding: 10px 50px;
+  height: 74px;
+  gap: 16px;
+}
+@media (max-width: 900px) {
+  #app .content .appbar .navbar-custom {
+    padding: 10px 13px;
+  }
+}
+#app .content .appbar .navbar-custom ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+#app .content .appbar .navbar-custom ul li {
+  font-size: 14px;
+  font-weight: 500;
+}
+#app .content .appbar .navbar-custom ul li a:active,
+#app .content .appbar .navbar-custom ul li a:hover,
+#app .content .appbar .navbar-custom ul li a {
+  text-decoration: none;
+  color: black;
+}
+#app .content .appbar .navbar-custom ul li a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .navbar-custom ul li a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom ul {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  height: 74px;
+}
+@media (max-width: 1330px) {
+  #app .content .appbar .navbar-custom .contact button {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact .mobile {
+  display: none;
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom .contact .mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #app .content .appbar .navbar-custom .contact .mobile div {
+    width: 30px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: #000;
+  }
+}
+#app .content .footbar-fluid {
+  background-color: rgb(20, 114, 208);
+  min-height: 535px;
+  background-image: url("./../assets/svg/footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+#app .content .footbar-fluid .footbar .divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.28);
+}
+#app .content .footbar-fluid .footbar .top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding: 60px 40px;
+}
+#app .content .footbar-fluid .footbar .top svg:first-child {
+  display: none;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .top {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px 0;
+  }
+  #app .content .footbar-fluid .footbar .top svg:last-child {
+    display: none;
+  }
+  #app .content .footbar-fluid .footbar .top svg:first-child {
+    display: block;
+  }
+}
+#app .content .footbar-fluid .footbar .top .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+}
+#app .content .footbar-fluid .footbar .top .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .content .footbar-fluid .footbar .bottom {
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1199px) and (min-width: 901px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 0;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide {
+  display: none;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .slide {
+    display: flex;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide h3 {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+#app .content .footbar-fluid .footbar .bottom .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+  max-width: 247px;
+  display: grid;
+  gap: 14px;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .card {
+    display: none;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .main {
+  padding: 0;
+}
+
+/*# sourceMappingURL=index.css.map */
