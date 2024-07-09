@@ -1,0 +1,407 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-xxl {
+  padding: 0;
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  font-family: "Inter", Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+@media (min-width: 1400px) {
+  #app .container-xxl, #app .container-xl, #app .container-lg, #app .container-md, #app .container-sm, #app .container {
+    max-width: 1360px;
+  }
+}
+#app .content {
+  padding: 0;
+}
+#app .content .contacts {
+  display: grid;
+  gap: 100px;
+  padding: 114px 40px 100px 40px;
+  text-align: left;
+  max-width: 1360px;
+}
+@media (max-width: 1180px) {
+  #app .content .contacts {
+    padding: 114px 10px 100px 10px;
+    gap: 10px;
+  }
+}
+#app .content .contacts .cardBlock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .cardBlock {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#app .content .contacts .cardBlock .uniq {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: 50px 34px;
+  border: 1px solid rgb(236, 241, 247);
+  border-radius: 30px;
+  background-image: url("./../assets/options/bg.png");
+  text-align: center;
+}
+#app .content .contacts .cardBlock .uniq h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: rgb(20, 114, 208);
+}
+@media (max-width: 800px) {
+  #app .content .contacts .cardBlock .uniq h2 {
+    font-size: 22px;
+  }
+}
+#app .content .contacts .cardBlock .uniq p {
+  font-size: 14px;
+  max-width: 490px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .cardBlock .uniq p {
+    font-size: 12px;
+  }
+}
+#app .content .contacts .cardBlock .card {
+  background-color: rgb(236, 241, 247);
+  padding: 50px 34px;
+  border: 1px solid rgb(236, 241, 247);
+  border-radius: 30px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .cardBlock .card {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+}
+#app .content .contacts .cardBlock .card h2 {
+  color: rgb(47, 47, 47);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .cardBlock .card h2 {
+    display: none;
+  }
+}
+#app .content .contacts .cardBlock .card .bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .cardBlock .card .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#app .content .contacts .cardBlock .card .bottom .left img {
+  width: 100%;
+}
+#app .content .contacts .cardBlock .card .bottom .left h2 {
+  font-size: 16px;
+  font-weight: 700;
+  max-width: 290px;
+  display: none;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .cardBlock .card .bottom .left h2 {
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  #app .content .contacts .cardBlock .card .bottom .right {
+    max-width: 290px;
+  }
+}
+#app .content .contacts .cardBlock .card .bottom .right h3 {
+  color: rgb(162, 160, 160);
+  font-weight: 700;
+  font-size: 16px;
+}
+#app .content .contacts .cardBlock .card .bottom .right p {
+  font-size: 14px;
+}
+#app .content .contacts .cardBlock .card .bottom .right h4 {
+  color: rgb(20, 114, 208);
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 60px;
+}
+#app .content .contacts .cardBlock .card .bottom .right button {
+  background: rgb(20, 114, 208);
+}
+#app .content .contacts .cardBlock .card:hover {
+  color: #FFFFFF;
+  background-color: rgb(20, 114, 208);
+}
+#app .content .contacts .cardBlock .card:hover h2 {
+  color: #FFFFFF;
+}
+#app .content .contacts .cardBlock .card:hover h3 {
+  color: #FFFFFF;
+}
+#app .content .contacts .cardBlock .card:hover h4 {
+  color: #FFFFFF;
+}
+#app .content .contacts .cardBlock .card:hover p {
+  color: #FFFFFF;
+}
+#app .content .contacts .cardBlock .card:hover .bottom .left h2 {
+  color: #FFFFFF;
+}
+#app .content .contacts .cardBlock .card:hover .bottom .right h3 {
+  color: white;
+}
+#app .content .contacts .cardBlock .card:hover .bottom .right p {
+  color: white;
+}
+#app .content .contacts .cardBlock .card:hover .bottom .right h4 {
+  color: white;
+}
+#app .content .contacts .cardBlock .card:hover .bottom .right button {
+  background-color: #FFFFFF;
+  color: rgb(20, 114, 208);
+}
+#app .content .contacts .header h1 {
+  font-weight: 700;
+  color: rgb(47, 47, 47);
+  font-size: 44px;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+#app .content .contacts .header h1 span {
+  color: rgb(20, 114, 208);
+}
+@media (max-width: 800px) {
+  #app .content .contacts .header h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 12px;
+  }
+}
+#app .content .contacts .header h3 {
+  font-size: 12px;
+  color: rgb(162, 160, 160);
+  font-weight: 200;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .header h3 {
+    font-size: 10px;
+  }
+}
+#app .content .contacts .header h3 span {
+  color: rgb(47, 47, 47);
+}
+#app .content .appbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 120;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 1.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+#app .content .appbar .navbar-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  height: 74px;
+  gap: 16px;
+}
+@media (max-width: 900px) {
+  #app .content .appbar .navbar-custom {
+    padding: 10px 13px;
+  }
+}
+#app .content .appbar .navbar-custom ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+#app .content .appbar .navbar-custom ul li {
+  font-size: 14px;
+  font-weight: 500;
+}
+#app .content .appbar .navbar-custom ul li a:active,
+#app .content .appbar .navbar-custom ul li a:hover,
+#app .content .appbar .navbar-custom ul li a {
+  text-decoration: none;
+  color: black;
+}
+#app .content .appbar .navbar-custom ul li a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .navbar-custom ul li a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom ul {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  height: 74px;
+}
+@media (max-width: 1330px) {
+  #app .content .appbar .navbar-custom .contact button {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact .mobile {
+  display: none;
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom .contact .mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #app .content .appbar .navbar-custom .contact .mobile div {
+    width: 30px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: #000;
+  }
+}
+#app .content .footbar-fluid {
+  background-color: rgb(20, 114, 208);
+  min-height: 535px;
+  background-image: url("./../assets/svg/footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+#app .content .footbar-fluid .footbar .divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.28);
+}
+#app .content .footbar-fluid .footbar .top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding: 60px 40px;
+}
+#app .content .footbar-fluid .footbar .top svg:first-child {
+  display: none;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .top {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px 0;
+  }
+  #app .content .footbar-fluid .footbar .top svg:last-child {
+    display: none;
+  }
+  #app .content .footbar-fluid .footbar .top svg:first-child {
+    display: block;
+  }
+}
+#app .content .footbar-fluid .footbar .top .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+}
+#app .content .footbar-fluid .footbar .top .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .content .footbar-fluid .footbar .bottom {
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1199px) and (min-width: 901px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 0;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide {
+  display: none;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .slide {
+    display: flex;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide h3 {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+#app .content .footbar-fluid .footbar .bottom .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+  max-width: 247px;
+  display: grid;
+  gap: 14px;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .card {
+    display: none;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .main {
+  padding: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

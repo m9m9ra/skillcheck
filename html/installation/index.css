@@ -1,0 +1,758 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-xxl {
+  padding: 0;
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  font-family: "Inter", Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+@media (min-width: 1400px) {
+  #app .container-xxl, #app .container-xl, #app .container-lg, #app .container-md, #app .container-sm, #app .container {
+    max-width: 1360px;
+  }
+}
+#app .content {
+  padding: 0;
+}
+#app .content .slider {
+  padding: 150px 10px;
+}
+#app .content .slider .top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+@media (max-width: 800px) {
+  #app .content .slider .top {
+    margin-bottom: 40px;
+  }
+}
+#app .content .slider .top h2 {
+  font-size: 44px;
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  #app .content .slider .top h2 {
+    font-size: 22px;
+  }
+}
+#app .content .slider .top .button {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  #app .content .slider .top .button {
+    display: none;
+  }
+}
+#app .content .slider .top .button svg:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+#app .content .slider .cardBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: hidden;
+  gap: 20px;
+}
+#app .content .slider .cardBlock::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
+}
+#app .content .slider .mobile {
+  display: none;
+}
+@media (max-width: 800px) {
+  #app .content .slider .mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  #app .content .slider .mobile svg {
+    scale: 0.9;
+  }
+}
+#app .content .singly {
+  background-image: url("./../assets/background/singly.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(20, 114, 208);
+  min-height: 2000px;
+  margin-top: 140px;
+  border-radius: 40px;
+  color: #FFFFFF;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+@media (max-width: 800px) {
+  #app .content .singly {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    border-radius: 20px;
+    margin-top: 80px;
+  }
+}
+#app .content .singly .cont {
+  display: grid;
+  gap: 60px;
+}
+#app .content .singly .cont h2 {
+  font-size: 44px;
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont h2 {
+    font-size: 22px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont {
+    gap: 30px;
+  }
+}
+#app .content .singly .cont .bottomBlock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: left;
+}
+@media (max-width: 900px) {
+  #app .content .singly .cont .bottomBlock {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#app .content .singly .cont .bottomBlock .card {
+  padding: 50px;
+  border-radius: 40px;
+  display: grid;
+  justify-items: start;
+  align-content: space-between;
+  gap: 40px;
+}
+#app .content .singly .cont .bottomBlock .card p.text {
+  color: rgb(47, 47, 47);
+  font-size: 24px;
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont .bottomBlock .card p.text {
+    padding: 0 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+#app .content .singly .cont .bottomBlock .card button.rt {
+  margin-top: 200px;
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont .bottomBlock .card button.rt {
+    margin-top: 0;
+  }
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont .bottomBlock .card {
+    padding: 40px 20px;
+    border-radius: 20px;
+  }
+}
+#app .content .singly .cont .bottomBlock .card h3 {
+  color: rgb(20, 114, 208);
+  font-weight: 700;
+  font-size: 28px;
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont .bottomBlock .card h3 {
+    font-size: 18px;
+  }
+}
+#app .content .singly .cont .bottomBlock .card h4 {
+  color: rgb(162, 160, 160);
+  font-size: 20px;
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont .bottomBlock .card h4 {
+    font-size: 14px;
+  }
+}
+#app .content .singly .cont .bottomBlock .card .info {
+  display: grid;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont .bottomBlock .card .info {
+    gap: 10px;
+  }
+}
+#app .content .singly .cont .bottomBlock .card .info .row {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont .bottomBlock .card .info .row {
+    align-items: normal;
+  }
+}
+#app .content .singly .cont .bottomBlock .card .info .row p {
+  font-size: 14px;
+  font-weight: 400;
+  max-width: 510px;
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont .bottomBlock .card .info .row p {
+    max-width: 250px;
+    font-size: 12px;
+    padding: 0;
+  }
+}
+#app .content .singly .cont .bottomBlock .card .info .row svg {
+  max-width: 60px;
+}
+#app .content .singly .cont .topblock {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 96px;
+  margin-bottom: 150px;
+}
+@media (max-width: 900px) {
+  #app .content .singly .cont .topblock {
+    flex-direction: column;
+    margin-bottom: 80px;
+    gap: 30px;
+  }
+  #app .content .singly .cont .topblock .left img {
+    width: 100%;
+  }
+}
+#app .content .singly .cont .topblock .right {
+  width: 50%;
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont .topblock .right {
+    width: 100%;
+  }
+  #app .content .singly .cont .topblock .right .div button {
+    font-size: 10px;
+  }
+}
+#app .content .singly .cont .topblock .right .text {
+  display: grid;
+  gap: 40px;
+  text-align: left;
+}
+#app .content .singly .cont .topblock .right .text .block .head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#app .content .singly .cont .topblock .right .text .block .head h4 {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 800px) {
+  #app .content .singly .cont .topblock .right .text .block .head h4 {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+#app .content .singly .cont .topblock .right .text .block ol {
+  padding-left: 20px;
+  max-width: 500px;
+}
+#app .content .singly .cont .topblock .right .text .block ol li {
+  font-size: 14px;
+  color: rgb(47, 47, 47);
+  line-height: 24px;
+}
+#app .content .singly .cont .topblock .right .text .block p {
+  font-size: 14px;
+  max-width: 500px;
+}
+#app .content .install {
+  padding-top: 74px;
+  display: grid;
+  gap: 40px;
+  text-align: left;
+}
+#app .content .install h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: Text/Black;
+}
+#app .content .install h2 span {
+  color: rgb(20, 114, 208);
+}
+@media (max-width: 800px) {
+  #app .content .install h2 {
+    font-size: 22px;
+  }
+}
+#app .content .install .alert {
+  border: 4px solid rgb(20, 114, 208);
+  border-radius: 20px;
+  padding: 14px 40px;
+}
+@media (max-width: 800px) {
+  #app .content .install .alert {
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 8px 20px;
+  }
+}
+#app .content .install .alert p {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: rgb(47, 47, 47);
+  font-weight: 700;
+  font-size: 20px;
+}
+#app .content .install .alert p span {
+  color: rgb(220, 7, 7);
+  font-size: 44px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+@media (max-width: 800px) {
+  #app .content .install .alert p {
+    font-size: 12px;
+  }
+}
+#app .content .install .montage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  #app .content .install .montage {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#app .content .install .montage .card {
+  border: none;
+  background-color: rgb(236, 241, 247);
+  border-radius: 20px;
+  padding: 58px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#app .content .install .montage .card p {
+  text-align: center;
+}
+#app .content .install .montage .card svg {
+  position: relative;
+  bottom: 74px;
+}
+#app .content .install .howtoblock {
+  display: grid;
+  gap: 40px;
+  padding-bottom: 120px;
+}
+#app .content .install .howtoblock .card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-style: none;
+  border-bottom: 1px rgb(180, 205, 237) solid;
+}
+#app .content .install .howtoblock .card h3 {
+  color: rgb(180, 205, 237);
+  font-size: 120px;
+  font-weight: 700;
+  margin-right: 206px;
+  min-width: 149px;
+}
+@media (max-width: 800px) {
+  #app .content .install .howtoblock .card h3 {
+    white-space: nowrap;
+  }
+}
+#app .content .install .howtoblock .card .info {
+  max-width: 650px;
+}
+#app .content .install .howtoblock .card .info h4 {
+  color: rgb(20, 114, 208);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+#app .content .install .howtoblock .card .info p {
+  color: rgb(47, 47, 47);
+  font-size: 14px;
+  font-weight: 500;
+}
+#app .content .install .topblock {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 96px;
+  margin-bottom: 150px;
+}
+@media (max-width: 800px) {
+  #app .content .install .topblock {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  #app .content .install .topblock .left img {
+    width: 100%;
+  }
+}
+#app .content .install .topblock .right {
+  width: 50%;
+}
+@media (max-width: 800px) {
+  #app .content .install .topblock .right {
+    width: 100%;
+  }
+}
+#app .content .install .topblock .right .header {
+  display: grid;
+  gap: 40px;
+  justify-items: flex-start;
+  margin-bottom: 60px;
+}
+#app .content .install .topblock .right .header h1 {
+  color: rgb(47, 47, 47);
+  font-size: 44px;
+  font-weight: 700;
+}
+#app .content .install .topblock .right .header h1 span {
+  font-size: 24px;
+  color: rgb(20, 114, 208);
+  text-transform: lowercase;
+}
+@media (max-width: 800px) {
+  #app .content .install .topblock .right .header h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 800px) {
+  #app .content .install .topblock .right .header {
+    margin-bottom: 40px;
+  }
+  #app .content .install .topblock .right .header .div button {
+    font-size: 10px;
+  }
+}
+#app .content .install .topblock .right .text {
+  display: grid;
+  gap: 40px;
+}
+#app .content .install .topblock .right .text .block .head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#app .content .install .topblock .right .text .block .head h4 {
+  color: rgb(162, 160, 160);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+#app .content .install .topblock .right .text .block ol {
+  padding-left: 20px;
+  max-width: 500px;
+}
+#app .content .install .topblock .right .text .block ol li {
+  font-size: 14px;
+  color: rgb(47, 47, 47);
+  line-height: 24px;
+}
+@media (max-width: 800px) {
+  #app .content .install .topblock .right .text .block ol li {
+    font-size: 12px;
+  }
+}
+#app .content .install .topblock .right .text .block p {
+  font-size: 14px;
+  max-width: 500px;
+}
+@media (max-width: 800px) {
+  #app .content .install .topblock .right .text .block p {
+    font-size: 12px;
+  }
+}
+#app .content .install-header {
+  background-image: url("./../assets/background/installBG.png");
+  min-height: 900px;
+  padding: 0;
+}
+@media (max-width: 800px) {
+  #app .content .install-header {
+    min-height: 740px;
+  }
+}
+#app .content .install-header .center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 270px;
+  padding-left: 40px;
+  text-align: left;
+}
+@media (max-width: 800px) {
+  #app .content .install-header .center {
+    padding-top: 170px;
+    padding-left: 15px;
+  }
+}
+#app .content .install-header .center h1 {
+  font-size: 44px;
+  font-weight: 700;
+  max-width: 770px;
+  text-align: left;
+  color: rgb(47, 47, 47);
+  margin-bottom: 20px;
+  padding: 0;
+}
+@media (max-width: 800px) {
+  #app .content .install-header .center h1 {
+    font-size: 22px;
+  }
+}
+#app .content .install-header .center h3 {
+  color: rgb(47, 47, 47);
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+@media (max-width: 800px) {
+  #app .content .install-header .center h3 {
+    font-size: 12px;
+  }
+}
+#app .content .install-header .center .bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  #app .content .install-header .center .bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #app .content .install-header .center .bottom button {
+    width: 264px;
+    border: none;
+  }
+}
+#app .content .appbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 120;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 1.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+#app .content .appbar .navbar-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  height: 74px;
+  gap: 16px;
+}
+@media (max-width: 900px) {
+  #app .content .appbar .navbar-custom {
+    padding: 10px 13px;
+  }
+}
+#app .content .appbar .navbar-custom ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+#app .content .appbar .navbar-custom ul li {
+  font-size: 14px;
+  font-weight: 500;
+}
+#app .content .appbar .navbar-custom ul li a:active,
+#app .content .appbar .navbar-custom ul li a:hover,
+#app .content .appbar .navbar-custom ul li a {
+  text-decoration: none;
+  color: black;
+}
+#app .content .appbar .navbar-custom ul li a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .navbar-custom ul li a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom ul {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  height: 74px;
+}
+@media (max-width: 1330px) {
+  #app .content .appbar .navbar-custom .contact button {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact .mobile {
+  display: none;
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom .contact .mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #app .content .appbar .navbar-custom .contact .mobile div {
+    width: 30px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: #000;
+  }
+}
+#app .content .footbar-fluid {
+  background-color: rgb(20, 114, 208);
+  min-height: 535px;
+  background-image: url("./../assets/svg/footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+#app .content .footbar-fluid .footbar .divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.28);
+}
+#app .content .footbar-fluid .footbar .top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding: 60px 40px;
+}
+#app .content .footbar-fluid .footbar .top svg:first-child {
+  display: none;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .top {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px 0;
+  }
+  #app .content .footbar-fluid .footbar .top svg:last-child {
+    display: none;
+  }
+  #app .content .footbar-fluid .footbar .top svg:first-child {
+    display: block;
+  }
+}
+#app .content .footbar-fluid .footbar .top .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+}
+#app .content .footbar-fluid .footbar .top .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .content .footbar-fluid .footbar .bottom {
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1199px) and (min-width: 901px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 0;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide {
+  display: none;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .slide {
+    display: flex;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide h3 {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+#app .content .footbar-fluid .footbar .bottom .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+  max-width: 247px;
+  display: grid;
+  gap: 14px;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .card {
+    display: none;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .main {
+  padding: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -27,12 +27,12 @@
       </div>
 
       <ul>
-        <li>ВАРИАНТЫ СИСТЕМ</li>
-        <li>АНАЛИЗ ВОДЫ</li>
-        <li>РАСХОДНИКИ</li>
-        <li>МОНТАЖ</li>
+        <li><a href="/options">ВАРИАНТЫ СИСТЕМ</a></li>
+        <li><a href="/analysis">АНАЛИЗ ВОДЫ</a></li>
+        <li><a href="/consumables">РАСХОДНИКИ</a></li>
+        <li><a href="/installation">МОНТАЖ</a></li>
         <li>КОМПАНИЯ</li>
-        <li><a @click.prevent="$router.push(`/contacts`)">КОНТАКТЫ</a></li>
+        <li><a href="/contacts">КОНТАКТЫ</a></li>
       </ul>
 
       <div class="contacts">
@@ -60,12 +60,15 @@
 import {onMounted, ref} from "vue";
 
 const animated = ref(false);
+const animatedFade = ref(false);
 
 onMounted(() => {
   document.addEventListener(`scroll`, (e) => {
     const windowScroll = window.scrollY;
     if (windowScroll > 140 ) {
       animated.value = true;
+    } else if (windowScroll > 300) {
+      animatedFade.value = true;
     } else {
       animated.value = false;
     }

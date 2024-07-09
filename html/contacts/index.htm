@@ -46,10 +46,10 @@
                     </div>
 
                     <ul>
-                        <li>ВАРИАНТЫ СИСТЕМ</li>
-                        <li>АНАЛИЗ ВОДЫ</li>
-                        <li>РАСХОДНИКИ</li>
-                        <li>МОНТАЖ</li>
+                        <li><a href="/options">ВАРИАНТЫ СИСТЕМ</a></li>
+                        <li><a href="/analysis">АНАЛИЗ ВОДЫ</a></li>
+                        <li><a href="/consumables">РАСХОДНИКИ</a></li>
+                        <li><a href="/installation">МОНТАЖ</a></li>
                         <li>КОМПАНИЯ</li>
                         <li><a href="/contacts">КОНТАКТЫ</a></li>
                     </ul>
@@ -107,7 +107,7 @@
                         <h1 style="text-transform: uppercase">Контакты</h1>
                     </div>
 
-                    <div class="top">
+                    <div class="top animated animatedFadeInUp fadeInUp">
                         <div class="left">
 
                             <div class="card">
@@ -120,7 +120,7 @@
                                 <p>info@magazin-kaplya.ru</p>
                             </div>
 
-                            <div class="card animated animatedFadeInUp fadeInUp">
+                            <div class="card">
                                 <h4>Реквизиты:</h4>
                                 <p>OOO «KAPLYA»</p>
                                 <p>ИНН 3906259777</p>
@@ -175,7 +175,7 @@
                                  style="width: 100%; min-height: 400px"></div>
                         </div>
                     </div>
-                    <div class="bottom animated animatedFadeInUp fadeInUp">
+                    <div :class="`bottom ${animated ? 'animated animatedFadeInUp fadeInUp' : false}`">
                         <div class="left">
                             <img src="./../assets/slide/manContacts.png" height="523" width="509"/>
                         </div>
@@ -199,13 +199,20 @@
                         animated: false
                     },
                     mounted() {
+                        document.addEventListener(`scroll`, (e) => {
+                            const windowScroll = window.scrollY;
+                            if (windowScroll > 120) {
+                                this.animated = true;
+                            }
+                        })
+
                         // todo YaMap
                         ymaps.ready(init);
 
                         function init() {
                             var myMap = new ymaps.Map("map", {
-                                    center: [54.768171, 20.608611],
-                                    zoom: 17
+                                    center: [54.698960, 20.505144],
+                                    zoom: 13
                                 }, {
                                     searchControlProvider: 'yandex#search'
                                 }),
@@ -216,13 +223,13 @@
                                 ),
 
                                 myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                                    balloonContent: 'Луговая улица, 2A/2'
+                                    balloonContent: 'ул. Багратиона, 91'
                                 }, {
                                     // Опции.
                                     // Необходимо указать данный тип макета.
                                     iconLayout: 'default#image',
                                     // Своё изображение иконки метки.
-                                    iconImageHref: './assets/pin.png',
+                                    iconImageHref: './../assets/pin.png',
                                     // Размеры метки.
                                     iconImageSize: [69, 73],
                                     // Смещение левого верхнего угла иконки относительно

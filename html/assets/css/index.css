@@ -66,17 +66,37 @@ body {
 #app .content .homeView .news .bottom .card img {
   width: 100%;
 }
+@media (max-width: 900px) {
+  #app .content .homeView .news .bottom .card img {
+    height: 70%;
+    object-fit: cover;
+    object-position: 0 0;
+    border-radius: 20px;
+  }
+}
 #app .content .homeView .news .bottom .card h4 {
   font-size: 12px;
   color: rgb(162, 160, 160);
   margin: 0;
   padding: 0;
 }
+@media (max-width: 900px) {
+  #app .content .homeView .news .bottom .card h4 {
+    position: relative;
+    bottom: 50px;
+  }
+}
 #app .content .homeView .news .bottom .card p {
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-weight: 700;
+}
+@media (max-width: 900px) {
+  #app .content .homeView .news .bottom .card p {
+    position: relative;
+    bottom: 50px;
+  }
 }
 #app .content .homeView .news .top {
   display: grid;
@@ -97,9 +117,9 @@ body {
 }
 #app .content .homeView .workForm {
   display: grid;
-  gap: 30px;
   text-align: left;
-  padding: 90px 30px;
+  padding: 20px 30px;
+  background-color: #FFFFFF;
 }
 @media (max-width: 1000px) {
   #app .content .homeView .workForm {
@@ -107,108 +127,166 @@ body {
   }
 }
 #app .content .homeView .workForm .top {
+  min-height: 386px;
+  align-items: center;
+  width: 100%;
   display: flex;
-  align-items: flex-end;
-  gap: 20px;
   justify-content: space-between;
+  gap: 20px;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1100px) {
   #app .content .homeView .workForm .top {
-    flex-direction: column;
-    align-items: center;
+    gap: 0;
   }
+}
+#app .content .homeView .workForm .top img {
+  max-width: 532px;
+}
+@media (max-width: 600px) {
   #app .content .homeView .workForm .top img {
     width: 100%;
   }
 }
-#app .content .homeView .workForm .top img {
-  position: relative;
-  top: 30px;
-  min-width: 335px;
-  width: 50%;
-}
 #app .content .homeView .workForm .top .info {
-  width: 70%;
-  height: 386px;
-  background: rgb(236, 241, 247);
-  border-radius: 40px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  background-color: rgb(236, 241, 247);
+  border-radius: 40px;
+  width: 100%;
+  height: 380px;
+  position: relative;
+  top: 40px;
+  padding: 40px 10px 0px 10px;
 }
-@media (max-width: 500px) {
+@media (max-width: 1100px) {
   #app .content .homeView .workForm .top .info {
-    width: 88%;
-    padding: 15px;
+    border-radius: 20px;
+    max-width: 540px;
+    padding: 40px 12px 0 12px;
+    max-height: 340px;
+    max-height: 300px;
+    top: 0;
   }
 }
 #app .content .homeView .workForm .top .info .center {
-  max-width: 410px;
+  max-width: 436px;
+  display: grid;
+  gap: 40px;
+}
+@media (max-width: 1100px) {
+  #app .content .homeView .workForm .top .info .center {
+    gap: 10px;
+  }
+}
+#app .content .homeView .workForm .top .info .center button {
+  max-width: 270px;
 }
 #app .content .homeView .workForm .top .info .center h3 {
-  color: rgb(162, 160, 160);
   font-size: 20px;
+  color: rgb(162, 160, 160);
+  font-weight: 400;
+}
+@media (max-width: 1100px) {
+  #app .content .homeView .workForm .top .info .center h3 {
+    font-size: 12px;
+  }
 }
 #app .content .homeView .workForm .top .info .center p {
-  text-align: left;
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   #app .content .homeView .workForm .top .info .center p {
     font-size: 18px;
   }
 }
-#app .content .homeView .workForm .bottom {
-  display: flex;
-  align-items: flex-end;
-  gap: 20px;
-  justify-content: space-between;
-}
-@media (max-width: 1080px) {
-  #app .content .homeView .workForm .bottom {
-    flex-direction: column-reverse;
+@media (max-width: 1000px) {
+  #app .content .homeView .workForm .top {
+    flex-direction: column;
     align-items: center;
   }
+}
+#app .content .homeView .workForm .bottom {
+  min-height: 386px;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 1100px) {
+  #app .content .homeView .workForm .bottom {
+    gap: 0;
+  }
+}
+#app .content .homeView .workForm .bottom img {
+  max-width: 532px;
+}
+@media (max-width: 600px) {
   #app .content .homeView .workForm .bottom img {
     width: 100%;
   }
 }
-#app .content .homeView .workForm .bottom img {
-  position: relative;
-  width: 50%;
-  min-width: 335px;
-  top: 30px;
-}
 #app .content .homeView .workForm .bottom .info {
-  width: 70%;
-  height: 386px;
-  background: rgb(236, 241, 247);
-  border-radius: 40px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  background-color: rgb(236, 241, 247);
+  border-radius: 40px;
+  width: 100%;
+  padding: 20px 10px 80px 10px;
+  position: relative;
+  top: 14px;
 }
-@media (max-width: 500px) {
+@media (max-width: 1100px) {
   #app .content .homeView .workForm .bottom .info {
-    width: 88%;
-    padding: 15px;
+    border-radius: 20px;
+    max-width: 540px;
+    padding: 40px 12px 40px 12px;
+    top: 0;
   }
 }
 #app .content .homeView .workForm .bottom .info .center {
-  max-width: 400px;
+  max-width: 436px;
+  display: grid;
+  gap: 40px;
+}
+@media (max-width: 1100px) {
+  #app .content .homeView .workForm .bottom .info .center {
+    gap: 10px;
+  }
+}
+#app .content .homeView .workForm .bottom .info .center button {
+  max-width: 270px;
 }
 #app .content .homeView .workForm .bottom .info .center h3 {
-  color: rgb(162, 160, 160);
   font-size: 20px;
+  color: rgb(162, 160, 160);
+  font-weight: 400;
+}
+@media (max-width: 1100px) {
+  #app .content .homeView .workForm .bottom .info .center h3 {
+    font-size: 12px;
+  }
 }
 #app .content .homeView .workForm .bottom .info .center p {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   #app .content .homeView .workForm .bottom .info .center p {
     font-size: 18px;
+  }
+}
+@media (max-width: 1000px) {
+  #app .content .homeView .workForm .bottom {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }
 #app .content .homeView .feeedForm {
@@ -222,10 +300,13 @@ body {
   background-image: url("./../slide/bgFeed.png");
   background-position: bottom center;
 }
-@media (max-width: 1000px) {
+@media (max-width: 750px) {
   #app .content .homeView .feeedForm {
-    padding: 55px 10px 75px 10px;
+    padding: 55px 10px 0px 10px;
     border-radius: 20px;
+    background-image: url("./../slide/fon_mob.png");
+    background-size: contain;
+    background-position-y: 120%;
   }
 }
 #app .content .homeView .feeedForm .content .bottom {
@@ -246,6 +327,7 @@ body {
 @media (max-width: 1000px) {
   #app .content .homeView .feeedForm .content .bottom h1 {
     font-size: 24px;
+    line-height: 32px;
   }
 }
 #app .content .homeView .feeedForm .content .middle {
@@ -271,6 +353,11 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
+@media (max-width: 1000px) {
+  #app .content .homeView .feeedForm .content .middle .card {
+    padding: 20px 20px 40px 20px;
+  }
+}
 #app .content .homeView .feeedForm .content .middle .card h3 {
   font-size: 20px;
   font-weight: 700;
@@ -287,7 +374,7 @@ body {
 }
 #app .content .homeView .feeedForm .content .top {
   display: grid;
-  gap: 30px;
+  gap: 40px;
 }
 #app .content .homeView .feeedForm .content .top h2 {
   font-size: 44px;
@@ -301,6 +388,7 @@ body {
   }
 }
 #app .content .homeView .feeedForm .content .top p {
+  line-height: 20px;
   color: white;
   max-width: 840px;
 }
@@ -344,6 +432,8 @@ body {
 @media (max-width: 440px) {
   #app .content .homeView .feedback .bottom .left {
     height: auto;
+    padding: 20px 10px;
+    border-radius: 20px;
   }
 }
 #app .content .homeView .feedback .bottom .left .header {
@@ -358,12 +448,20 @@ body {
   padding: 15px 0;
   gap: 15px;
 }
+#app .content .homeView .feedback .bottom .left .header .rt .star {
+  display: flex;
+  gap: 10px;
+}
 #app .content .homeView .feedback .bottom .left .header .rt p {
   margin: 0;
   padding: 0;
+  color: rgb(162, 160, 160);
+  font-size: 12px;
+  text-transform: uppercase;
 }
 #app .content .homeView .feedback .bottom .left .header .rt p:first-child {
   font-weight: 700;
+  color: black;
   position: relative;
   top: 10px;
   font-size: 16px;
@@ -377,6 +475,19 @@ body {
   font-size: 14px;
   font-weight: 400;
 }
+#app .content .homeView .feedback .bottom .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  #app .content .homeView .feedback .bottom .right {
+    gap: 0;
+  }
+  #app .content .homeView .feedback .bottom .right svg {
+    scale: 0.6;
+  }
+}
 #app .content .homeView .feedback .bottom .right .bottom {
   height: 35%;
   display: flex;
@@ -386,16 +497,42 @@ body {
 @media (max-width: 1000px) {
   #app .content .homeView .feedback .bottom .right .bottom {
     height: auto;
+    align-items: center;
   }
 }
 #app .content .homeView .feedback .bottom .right .bottom .button {
   display: flex;
+  align-items: flex-end;
   gap: 20px;
+}
+#app .content .homeView .feedback .bottom .right .bottom .button svg:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+  #app .content .homeView .feedback .bottom .right .bottom .button {
+    gap: 0;
+  }
+  #app .content .homeView .feedback .bottom .right .bottom .button svg {
+    scale: 0.8;
+  }
+}
+#app .content .homeView .feedback .bottom .right .bottom .button p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: rgb(162, 160, 160);
+  font-weight: 700;
+}
+@media (max-width: 1220px) {
+  #app .content .homeView .feedback .bottom .right .bottom .button p {
+    display: none;
+  }
 }
 #app .content .homeView .feedback .bottom .right .top {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0;
+  gap: 10px;
 }
 @media (max-width: 1280px) {
   #app .content .homeView .feedback .bottom .right .top {
@@ -403,10 +540,10 @@ body {
   }
 }
 #app .content .homeView .feedback .bottom .right .top .card {
-  background-color: white;
+  background-color: rgb(245, 245, 245);
   border: 1px solid white;
   border-radius: 40px;
-  padding: 40px;
+  padding: 20px 10px 100px 10px;
 }
 @media (max-width: 1280px) {
   #app .content .homeView .feedback .bottom .right .top .card:last-child {
@@ -430,13 +567,21 @@ body {
   padding: 15px 0;
   gap: 15px;
 }
+#app .content .homeView .feedback .bottom .right .top .card .header .rt .star {
+  display: flex;
+  gap: 10px;
+}
 #app .content .homeView .feedback .bottom .right .top .card .header .rt p {
   margin: 0;
   padding: 0;
+  color: rgb(162, 160, 160);
+  font-size: 12px;
+  text-transform: uppercase;
 }
 #app .content .homeView .feedback .bottom .right .top .card .header .rt p:first-child {
   font-weight: 700;
   position: relative;
+  color: black;
   top: 10px;
   font-size: 16px;
 }
@@ -457,6 +602,7 @@ body {
   font-size: 44px;
   font-weight: 700;
   max-width: 780px;
+  color: black;
 }
 #app .content .homeView .feedback .top h2 span {
   color: rgb(20, 114, 208);
@@ -495,7 +641,13 @@ body {
   }
 }
 #app .content .homeView .sliderTop .top p {
-  max-width: 840px;
+  max-width: 940px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+#app .content .homeView .sliderTop .top p span {
+  color: rgb(20, 114, 208);
 }
 @media (max-width: 1000px) {
   #app .content .homeView .sliderTop .top p {
@@ -520,18 +672,20 @@ body {
   height: 537px;
   background-color: rgb(20, 114, 208);
   border-radius: 40px 0px 0px 40px;
-  padding: 60px 40px 0 40px;
+  padding: 50px 60px 0 60px;
   display: grid;
   align-content: space-between;
 }
 @media (max-width: 1270px) {
   #app .content .homeView .sliderTop .bottom .left {
-    border-radius: 40px 40px 0 0;
+    border-radius: 20px 20px 0 0;
     max-width: 767px;
+    padding: 20px 20px 0 20px;
   }
 }
 #app .content .homeView .sliderTop .bottom .left h3 {
   font-size: 28px;
+  margin-bottom: 20px;
 }
 @media (max-width: 1080px) {
   #app .content .homeView .sliderTop .bottom .left h3 {
@@ -539,8 +693,9 @@ body {
   }
 }
 #app .content .homeView .sliderTop .bottom .left p {
+  font-weight: 300;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 24px;
   position: relative;
   bottom: 50px;
 }
@@ -595,25 +750,44 @@ body {
     scale: 1.2;
   }
 }
+#app .content .homeView .sliderTop .bottom .left .slide .rt svg:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
 #app .content .homeView .sliderTop .bottom .right {
   max-width: 767px;
 }
 @media (max-width: 1270px) {
   #app .content .homeView .sliderTop .bottom .right img {
     width: 100%;
-    border-radius: 0 0 40px 40px;
+    border-radius: 0 0 20px 20px;
   }
 }
 #app .content .homeView .topBlockWrapper {
+  background-color: #FFFFFF;
   background-image: url("./../slide/bgtop.png");
   background-position: top right;
   background-repeat: no-repeat;
+}
+@media (max-width: 1100px) {
+  #app .content .homeView .topBlockWrapper {
+    background-size: contain;
+  }
 }
 #app .content .homeView .topBlockWrapper .topBlock {
   text-align: left;
   padding: 150px 30px 60px 30px;
   display: grid;
   gap: 30px;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media (max-width: 1000px) {
   #app .content .homeView .topBlockWrapper .topBlock {
@@ -624,7 +798,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow-y: hidden;
   gap: 20px;
+}
+#app .content .homeView .topBlockWrapper .topBlock .cardBlock::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
 }
 #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card {
   padding: 20px 50px;
@@ -633,6 +812,8 @@ body {
   background-color: rgb(236, 241, 247);
   border: 1px solid rgb(236, 241, 247);
   border-radius: 30px;
+  transition: 0.3s;
+  min-width: 420px;
 }
 @media (max-width: 1399px) and (min-width: 1000px) {
   #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card:last-child {
@@ -642,6 +823,7 @@ body {
 @media (max-width: 1000px) {
   #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card {
     padding: 10px 10px;
+    min-width: 350px;
   }
   #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card:last-child {
     display: none;
@@ -653,6 +835,7 @@ body {
 #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card h3 {
   font-size: 18px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card .bottom {
   display: flex;
@@ -664,6 +847,17 @@ body {
   font-weight: 600;
   color: rgb(20, 114, 208);
 }
+#app .content .homeView .topBlockWrapper .topBlock .cardBlock .card:hover {
+  cursor: pointer;
+  background-color: rgb(20, 114, 208);
+  color: #FFFFFF;
+}
+#app .content .homeView .topBlockWrapper .topBlock .cardBlock .card:hover .bottom {
+  transition: 1.2s;
+}
+#app .content .homeView .topBlockWrapper .topBlock .cardBlock .card:hover .bottom p {
+  color: #FFFFFF;
+}
 #app .content .homeView .topBlockWrapper .topBlock .top {
   display: grid;
   gap: 24px;
@@ -672,6 +866,7 @@ body {
   font-size: 44px;
   font-weight: 700;
   max-width: 720px;
+  text-transform: uppercase;
 }
 #app .content .homeView .topBlockWrapper .topBlock .top h2 span {
   color: rgb(20, 114, 208);
@@ -686,7 +881,7 @@ body {
   justify-content: space-between;
 }
 #app .content .homeView .topBlockWrapper .topBlock .top .bottom p {
-  max-width: 840px;
+  max-width: 940px;
 }
 @media (max-width: 1000px) {
   #app .content .homeView .topBlockWrapper .topBlock .top .bottom p {
@@ -698,8 +893,11 @@ body {
   align-items: center;
   gap: 20px;
 }
-#app .content .homeView .topBlockWrapper .topBlock .top .bottom .button img {
+#app .content .homeView .topBlockWrapper .topBlock .top .bottom .button svg {
   cursor: pointer;
+}
+#app .content .homeView .topBlockWrapper .topBlock .top .bottom .button svg:hover {
+  scale: 1.1;
 }
 @media (max-width: 1111px) {
   #app .content .homeView .topBlockWrapper .topBlock .top .bottom .button {
@@ -719,12 +917,14 @@ body {
   }
 }
 #app .content .homeView .wrapper video {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  height: 830px;
-  z-index: -10;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+  object-fit: cover;
 }
 #app .content .homeView .wrapper .content {
   height: 830px;
@@ -789,6 +989,92 @@ body {
 @media (max-width: 900px) {
   #app .content .homeView .wrapper .content .left .button {
     height: 20%;
+  }
+}
+#app .content .appbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 120;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 1.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+#app .content .appbar .navbar-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  height: 74px;
+  gap: 16px;
+}
+@media (max-width: 900px) {
+  #app .content .appbar .navbar-custom {
+    padding: 10px 13px;
+  }
+}
+#app .content .appbar .navbar-custom ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+#app .content .appbar .navbar-custom ul li {
+  font-size: 14px;
+  font-weight: 500;
+}
+#app .content .appbar .navbar-custom ul li a:active,
+#app .content .appbar .navbar-custom ul li a:hover,
+#app .content .appbar .navbar-custom ul li a {
+  text-decoration: none;
+  color: black;
+}
+#app .content .appbar .navbar-custom ul li a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .navbar-custom ul li a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom ul {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  height: 74px;
+}
+@media (max-width: 1330px) {
+  #app .content .appbar .navbar-custom .contact button {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact .mobile {
+  display: none;
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom .contact .mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #app .content .appbar .navbar-custom .contact .mobile div {
+    width: 30px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: #000;
   }
 }
 #app .content .footbar-fluid {
@@ -888,69 +1174,6 @@ body {
   margin: 0;
   padding: 0;
   cursor: pointer;
-}
-#app .content .appbar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  display: flex;
-}
-#app .content .appbar .navbar-custom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 50px;
-}
-@media (max-width: 900px) {
-  #app .content .appbar .navbar-custom {
-    padding: 20px 13px;
-  }
-}
-#app .content .appbar .navbar-custom ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-#app .content .appbar .navbar-custom ul li {
-  font-size: 14px;
-  font-weight: 500;
-}
-@media (max-width: 1000px) {
-  #app .content .appbar .navbar-custom ul {
-    display: none;
-  }
-}
-#app .content .appbar .navbar-custom .contacts {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-weight: 600;
-  font-size: 14px;
-}
-@media (max-width: 1330px) {
-  #app .content .appbar .navbar-custom .contacts button {
-    display: none;
-  }
-}
-#app .content .appbar .navbar-custom .contacts .mobile {
-  display: none;
-}
-@media (max-width: 1000px) {
-  #app .content .appbar .navbar-custom .contacts .mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  #app .content .appbar .navbar-custom .contacts .mobile div {
-    width: 30px;
-    height: 4px;
-    border: 1px solid black;
-    border-radius: 3px;
-    background: #000;
-  }
 }
 #app .main {
   padding: 0;

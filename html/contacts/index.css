@@ -39,7 +39,7 @@ body {
 @media (max-width: 1180px) {
   #app .content .contacts {
     padding: 114px 10px 100px 10px;
-    gap: 20px;
+    gap: 10px;
   }
 }
 #app .content .contacts .header h1 {
@@ -51,13 +51,20 @@ body {
 }
 @media (max-width: 800px) {
   #app .content .contacts .header h1 {
-    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 12px;
   }
 }
 #app .content .contacts .header h3 {
   font-size: 12px;
   color: rgb(162, 160, 160);
   font-weight: 200;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .header h3 {
+    font-size: 10px;
+  }
 }
 #app .content .contacts .header h3 span {
   color: rgb(47, 47, 47);
@@ -68,11 +75,18 @@ body {
   align-items: center;
   gap: 20px;
 }
-@media (max-width: 1180px) {
+@media (max-width: 1180px) and (min-width: 549px) {
   #app .content .contacts .top {
     flex-direction: column;
     gap: 20px;
     align-items: normal;
+  }
+}
+@media (max-width: 549px) {
+  #app .content .contacts .top {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 40px;
   }
 }
 #app .content .contacts .top .left {
@@ -146,10 +160,17 @@ body {
   overflow: hidden;
   clip-path: url(#c1);
 }
-@media (max-width: 1180px) {
+@media (max-width: 1180px) and (min-width: 549px) {
   #app .content .contacts .top .right {
     width: 88vw;
-    border-radius: 20px;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 549px) {
+  #app .content .contacts .top .right {
+    max-height: 160px;
+    width: 100%;
+    border-radius: 10px;
   }
 }
 #app .content .contacts .bottom {
@@ -160,18 +181,27 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 1180px) {
+@media (max-width: 1180px) and (min-width: 549px) {
   #app .content .contacts .bottom {
     flex-direction: column;
     gap: 100px;
     height: 100%;
-    display: none;
+  }
+}
+@media (max-width: 549px) {
+  #app .content .contacts .bottom {
+    flex-direction: column-reverse;
+    margin-top: 80px;
+    height: auto;
+    padding-top: 40px;
+    gap: 40px;
+    border-radius: 20px;
   }
 }
 #app .content .contacts .bottom .left {
   width: 34%;
 }
-@media (max-width: 1180px) {
+@media (max-width: 1180px) and (min-width: 549px) {
   #app .content .contacts .bottom .left {
     width: 100%;
   }
@@ -180,6 +210,20 @@ body {
   position: relative;
   bottom: 44px;
   right: 40px;
+}
+@media (max-width: 549px) {
+  #app .content .contacts .bottom .left {
+    display: flex;
+    align-items: flex-start;
+  }
+  #app .content .contacts .bottom .left img {
+    position: relative;
+    width: 270px;
+    height: 273px;
+    bottom: 0;
+    top: 12px;
+    right: 110px;
+  }
 }
 #app .content .contacts .bottom .right {
   width: 70%;
@@ -194,16 +238,35 @@ body {
 }
 #app .content .contacts .bottom .right .center {
   width: 527px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 549px) {
+  #app .content .contacts .bottom .right .center {
+    width: 318px;
+  }
 }
 #app .content .contacts .bottom .right .center h3 {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 500;
 }
+@media (max-width: 549px) {
+  #app .content .contacts .bottom .right .center h3 {
+    font-size: 12px;
+  }
+}
 #app .content .contacts .bottom .right .center p {
   text-transform: uppercase;
   font-size: 28px;
   font-weight: 700;
+}
+@media (max-width: 549px) {
+  #app .content .contacts .bottom .right .center p {
+    font-size: 18px;
+  }
 }
 #app .content .contacts .bottom .right .center p span {
   color: rgb(20, 114, 208);
@@ -224,6 +287,7 @@ body {
 #app .content .appbar .navbar-custom {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 50px;
   height: 74px;
   gap: 16px;

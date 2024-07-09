@@ -36,7 +36,7 @@ body {
 
       @media (max-width: 1180px) {
         padding: 114px 10px 100px 10px;
-        gap: 20px;
+        gap: 10px;
       }
 
       .header {
@@ -48,7 +48,9 @@ body {
           margin-bottom: 0;
 
           @media (max-width: 800px) {
-            margin-top: 20px;
+            font-size: 24px;
+            margin-bottom: 20px;
+            margin-top: 12px;
           }
         }
 
@@ -56,6 +58,10 @@ body {
           font-size: 12px;
           color: rgba(162, 160, 160, 1);
           font-weight: 200;
+
+          @media (max-width: 800px) {
+            font-size: 10px;
+          }
 
           span {
             color: rgba(47, 47, 47, 1);
@@ -70,10 +76,15 @@ body {
         align-items: center;
         gap: 20px;
 
-        @media (max-width: 1180px) {
+        @media (max-width: 1180px) and (min-width: 549px) {
           flex-direction: column;
           gap: 20px;
           align-items: normal;
+        }
+        @media (max-width: 549px) {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+          gap: 40px;
         }
 
         .left {
@@ -82,7 +93,7 @@ body {
           width: 60%;
           grid-row-gap: 60px;
 
-          @media (max-width: 1180px) and (min-width: 550px){
+          @media (max-width: 1180px) and (min-width: 550px) {
             width: 100%;
           }
           @media (max-width: 549px) {
@@ -155,9 +166,14 @@ body {
           overflow: hidden;
           clip-path: url(#c1);
 
-          @media (max-width: 1180px) {
+          @media (max-width: 1180px) and (min-width: 549px) {
             width: 88vw;
-            border-radius: 20px;
+            border-radius: 10px;
+          }
+          @media (max-width: 549px) {
+            max-height: 160px;
+            width: 100%;
+            border-radius: 10px;
           }
         }
       }
@@ -170,17 +186,24 @@ body {
         align-items: center;
         justify-content: space-between;
 
-        @media (max-width: 1180px) {
+        @media (max-width: 1180px) and (min-width: 549px) {
           flex-direction: column;
           gap: 100px;
           height: 100%;
-          display: none;
+        }
+        @media (max-width: 549px) {
+          flex-direction: column-reverse;
+          margin-top: 80px;
+          height: auto;
+          padding-top: 40px;
+          gap: 40px;
+          border-radius: 20px;
         }
 
         .left {
           width: 34%;
 
-          @media (max-width: 1180px) {
+          @media (max-width: 1180px) and (min-width: 549px){
             width: 100%;
           }
 
@@ -188,6 +211,20 @@ body {
             position: relative;
             bottom: 44px;
             right: 40px;
+          }
+
+          @media (max-width: 549px) {
+            display: flex;
+            align-items: flex-start;
+
+            img {
+              position: relative;
+              width: 270px;
+              height: 273px;
+              bottom: 0;
+              top: 12px;
+              right: 110px;
+            }
           }
         }
 
@@ -203,17 +240,30 @@ body {
 
           .center {
             width: 527px;
+            @media (max-width: 549px) {
+              width: 318px;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
 
             h3 {
               text-transform: uppercase;
               font-size: 20px;
               font-weight: 500;
+              @media (max-width: 549px) {
+                font-size: 12px;
+              }
             }
 
             p {
               text-transform: uppercase;
               font-size: 28px;
               font-weight: 700;
+              @media (max-width: 549px) {
+                font-size: 18px;
+              }
 
               span {
                 color: rgba(20, 114, 208, 1);
@@ -242,6 +292,7 @@ body {
       .navbar-custom {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 10px 50px;
         height: 74px;
         gap: 16px;
