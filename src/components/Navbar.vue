@@ -35,8 +35,10 @@
         <li><a href="/contacts">КОНТАКТЫ</a></li>
       </ul>
 
-      <div class="contacts">
-        <button type="button" class="btn btn-primary">ПОДБОР СИСТЕМЫ</button>
+      <div class="contact">
+        <button type="button" class="btn btn-primary">
+          <a href="/selection">ПОДБОР СИСТЕМЫ</a>
+        </button>
         <button type="button" class="btn btn-light" style="color: rgb(20, 114, 208);">+7 4012 278839</button>
         <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3.06781 26.9461L4.70111 21.0094L4.78448 20.7064L4.62693 20.4344C3.47123 18.4397 2.86431 16.1772 2.8671 13.8749L2.8671 13.8743C2.87014 6.64142 8.78467 0.750205 16.0583 0.75L3.06781 26.9461ZM3.06781 26.9461L9.20103 25.345L9.4878 25.2701L9.74828 25.4115C11.6744 26.4571 13.8439 27.0087 16.0524 27.0097C16.0525 27.0097 16.0526 27.0097 16.0527 27.0097H16.0585C23.331 27.0097 29.2468 21.1173 29.25 13.8848M3.06781 26.9461L16.0586 0.75C19.5901 0.751846 22.8997 2.11845 25.3912 4.60053C27.8826 7.0826 29.2513 10.3773 29.25 13.8848M29.25 13.8848L30 13.8851M29.25 13.8848L30 13.8851M30 13.8851C29.9966 21.5348 23.7421 27.7597 16.0585 27.7597H16.0524M30 13.8851C30.0013 10.1777 28.5529 6.69177 25.9205 4.0692L16.0524 27.7597M16.0524 27.7597C13.7193 27.7587 11.4268 27.176 9.39047 26.0707L16.0524 27.7597Z" stroke="#2F2F2F" stroke-width="1.5"/>
@@ -131,7 +133,7 @@ onMounted(() => {
       }
     }
 
-    .contacts {
+    .contact {
       display: flex;
       align-items: center;
       gap: 14px;
@@ -141,6 +143,25 @@ onMounted(() => {
       @media (max-width: 1330px) {
         button {
           display: none;
+
+        }
+      }
+
+      button {
+        a:active,
+        a:hover,
+        a {
+          text-decoration: none;
+          color: white;
+        }
+
+        a:active {
+          color: white;
+        }
+
+        a:hover {
+          cursor: pointer;
+          color: white;
         }
       }
 
