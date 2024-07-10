@@ -155,6 +155,7 @@ body {
   #app .content .actionForm {
     border-radius: 20px;
     margin-bottom: 80px;
+    background-image: url("./../assets/analys/cta.png");
   }
 }
 #app .content .actionForm h2 {
@@ -169,7 +170,6 @@ body {
   }
 }
 #app .content .singly {
-  margin-top: 140px;
   border-radius: 40px;
   color: #FFFFFF;
   padding-top: 150px;
@@ -177,7 +177,6 @@ body {
 }
 @media (max-width: 800px) {
   #app .content .singly {
-    padding-top: 50px;
     padding-bottom: 80px;
     border-radius: 20px;
     margin-top: 80px;
@@ -294,6 +293,8 @@ body {
   font-size: 14px;
   font-weight: 400;
   max-width: 510px;
+  position: relative;
+  top: 10px;
 }
 @media (max-width: 800px) {
   #app .content .singly .cont .bottomBlock .card .info .row p {
@@ -364,6 +365,10 @@ body {
   display: grid;
   gap: 40px;
   text-align: left;
+  background-image: url("../assets/analys/fff.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
 }
 #app .content .install .xddd p {
   font-size: 14px;
@@ -581,21 +586,101 @@ body {
   left: 0;
   right: 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   z-index: 120;
   background-color: rgba(255, 255, 255, 0);
   transition: 1.5s;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  white-space: nowrap;
+}
+#app .content .appbar .mobileMenu {
+  position: fixed;
+  top: 50px;
+  flex: 1;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+  transition: 1.5s;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./../assets/mobile/bgac.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 12px 10px 0 10px;
+}
+#app .content .appbar .mobileMenu .bottom {
+  display: grid;
+  justify-items: start;
+  text-align: left;
+  gap: 20px;
+  padding-top: 20px;
+}
+#app .content .appbar .mobileMenu .bottom .info h4 {
+  color: rgb(20, 114, 208);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+}
+#app .content .appbar .mobileMenu .bottom .info p {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+#app .content .appbar .mobileMenu .other {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#app .content .appbar .mobileMenu .other button a:active,
+#app .content .appbar .mobileMenu .other button a:hover,
+#app .content .appbar .mobileMenu .other button a {
+  text-decoration: none;
+  color: white;
+}
+#app .content .appbar .mobileMenu .other button a:active {
+  color: white;
+}
+#app .content .appbar .mobileMenu .other button a:hover {
+  cursor: pointer;
+  color: white;
+}
+#app .content .appbar .mobileMenu .top {
+  display: grid;
+  justify-items: start;
+}
+#app .content .appbar .mobileMenu .top .slide {
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 8px;
+}
+#app .content .appbar .mobileMenu .top .slide h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#app .content .appbar .mobileMenu .top a:active,
+#app .content .appbar .mobileMenu .top a:hover,
+#app .content .appbar .mobileMenu .top a {
+  text-decoration: none;
+  color: black;
+}
+#app .content .appbar .mobileMenu .top a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .mobileMenu .top a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
 }
 #app .content .appbar .navbar-custom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px 50px;
-  height: 74px;
-  gap: 16px;
+  justify-content: space-between;
 }
 @media (max-width: 900px) {
   #app .content .appbar .navbar-custom {
@@ -638,12 +723,24 @@ body {
   gap: 14px;
   font-weight: 600;
   font-size: 14px;
-  height: 74px;
 }
 @media (max-width: 1330px) {
   #app .content .appbar .navbar-custom .contact button {
     display: none;
   }
+}
+#app .content .appbar .navbar-custom .contact button a:active,
+#app .content .appbar .navbar-custom .contact button a:hover,
+#app .content .appbar .navbar-custom .contact button a {
+  text-decoration: none;
+  color: white;
+}
+#app .content .appbar .navbar-custom .contact button a:active {
+  color: white;
+}
+#app .content .appbar .navbar-custom .contact button a:hover {
+  cursor: pointer;
+  color: white;
 }
 #app .content .appbar .navbar-custom .contact .mobile {
   display: none;

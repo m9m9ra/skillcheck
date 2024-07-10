@@ -402,7 +402,7 @@ body {
   gap: 30px;
   text-align: left;
   padding: 90px 30px;
-  background-image: url("./../slide/feedbg.png");
+  background-image: url("./../../assets/slide/feedbg.png");
   background-repeat: no-repeat;
   background-position: top right;
 }
@@ -411,188 +411,141 @@ body {
     padding: 55px 10px 75px 10px;
   }
 }
-#app .content .homeView .feedback .bottom {
+#app .content .homeView .feedback .offset {
   display: flex;
-  gap: 20px;
-}
-@media (max-width: 890px) {
-  #app .content .homeView .feedback .bottom {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-#app .content .homeView .feedback .bottom .left {
-  min-height: 500px;
-  background-color: rgb(236, 241, 247);
-  border: 1px solid rgb(236, 241, 247);
-  border-radius: 40px;
-  padding: 40px;
-  max-width: 652px;
-}
-@media (max-width: 440px) {
-  #app .content .homeView .feedback .bottom .left {
-    height: auto;
-    padding: 20px 10px;
-    border-radius: 20px;
-  }
-}
-#app .content .homeView .feedback .bottom .left .header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-#app .content .homeView .feedback .bottom .left .header .rt {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 15px 0;
-  gap: 15px;
-}
-#app .content .homeView .feedback .bottom .left .header .rt .star {
-  display: flex;
-  gap: 10px;
-}
-#app .content .homeView .feedback .bottom .left .header .rt p {
-  margin: 0;
-  padding: 0;
-  color: rgb(162, 160, 160);
-  font-size: 12px;
-  text-transform: uppercase;
-}
-#app .content .homeView .feedback .bottom .left .header .rt p:first-child {
-  font-weight: 700;
-  color: black;
+  justify-content: flex-end;
   position: relative;
-  top: 10px;
-  font-size: 16px;
+  width: 100%;
+  bottom: 180px;
+  right: 0px;
 }
-#app .content .homeView .feedback .bottom .left .feed h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 20px 0;
-}
-#app .content .homeView .feedback .bottom .left .feed p {
-  font-size: 14px;
-  font-weight: 400;
-}
-#app .content .homeView .feedback .bottom .right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media (max-width: 1000px) {
-  #app .content .homeView .feedback .bottom .right {
-    gap: 0;
-  }
-  #app .content .homeView .feedback .bottom .right svg {
-    scale: 0.6;
+@media (max-width: 900px) {
+  #app .content .homeView .feedback .offset {
+    bottom: 0;
   }
 }
-#app .content .homeView .feedback .bottom .right .bottom {
-  height: 35%;
+#app .content .homeView .feedback .offset .block {
+  background-color: rgba(0, 0, 0, 0);
+  height: 120px;
+  width: 650px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
-@media (max-width: 1000px) {
-  #app .content .homeView .feedback .bottom .right .bottom {
-    height: auto;
-    align-items: center;
+@media (max-width: 900px) {
+  #app .content .homeView .feedback .offset .block {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
   }
 }
-#app .content .homeView .feedback .bottom .right .bottom .button {
+#app .content .homeView .feedback .offset .block .button {
   display: flex;
   align-items: flex-end;
   gap: 20px;
 }
-#app .content .homeView .feedback .bottom .right .bottom .button svg:hover {
-  scale: 1.1;
+@media (max-width: 900px) {
+  #app .content .homeView .feedback .offset .block .button p {
+    display: none;
+  }
+}
+#app .content .homeView .feedback .offset .block .button svg {
   cursor: pointer;
 }
-@media (max-width: 1000px) {
-  #app .content .homeView .feedback .bottom .right .bottom .button {
-    gap: 0;
-  }
-  #app .content .homeView .feedback .bottom .right .bottom .button svg {
-    scale: 0.8;
-  }
+#app .content .homeView .feedback .slider::-webkit-scrollbar {
+  width: 0;
 }
-#app .content .homeView .feedback .bottom .right .bottom .button p {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  color: rgb(162, 160, 160);
-  font-weight: 700;
+#app .content .homeView .feedback .slider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 520px;
+  width: 1323px;
+  margin: 0auto;
+  display: flex;
+  gap: 20px;
 }
-@media (max-width: 1220px) {
-  #app .content .homeView .feedback .bottom .right .bottom .button p {
-    display: none;
+@media (max-width: 900px) {
+  #app .content .homeView .feedback .slider {
+    max-width: 314px;
+    height: 100%;
   }
 }
-#app .content .homeView .feedback .bottom .right .top {
+#app .content .homeView .feedback .slider .card {
+  position: relative;
+  transition: 0.4s;
+  height: 340px;
+  min-width: 316px;
+  background: rgb(245, 245, 245);
+  z-index: 9;
+  border-width: 0;
+  padding: 40px 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 20px;
 }
-@media (max-width: 1280px) {
-  #app .content .homeView .feedback .bottom .right .top {
-    grid-template-columns: repeat(1, 1fr);
-  }
+#app .content .homeView .feedback .slider .card .info h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
-#app .content .homeView .feedback .bottom .right .top .card {
-  background-color: rgb(245, 245, 245);
-  border: 1px solid white;
-  border-radius: 40px;
-  padding: 20px 10px 100px 10px;
+#app .content .homeView .feedback .slider .card .info p {
+  font-size: 14px;
 }
-@media (max-width: 1280px) {
-  #app .content .homeView .feedback .bottom .right .top .card:last-child {
-    display: none;
-  }
-}
-@media (max-width: 890px) {
-  #app .content .homeView .feedback .bottom .right .top .card:first-child {
-    display: none;
-  }
-}
-#app .content .homeView .feedback .bottom .right .top .card .header {
+#app .content .homeView .feedback .slider .card .header {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-#app .content .homeView .feedback .bottom .right .top .card .header .rt {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 15px 0;
-  gap: 15px;
+#app .content .homeView .feedback .slider .card .header img {
+  transition: 0.8s;
+  scale: 0.8;
 }
-#app .content .homeView .feedback .bottom .right .top .card .header .rt .star {
-  display: flex;
-  gap: 10px;
+#app .content .homeView .feedback .slider .card .header .rt {
+  display: grid;
+  gap: 6px;
 }
-#app .content .homeView .feedback .bottom .right .top .card .header .rt p {
-  margin: 0;
+#app .content .homeView .feedback .slider .card .header .rt p {
   padding: 0;
+  margin: 0;
   color: rgb(162, 160, 160);
   font-size: 12px;
+}
+#app .content .homeView .feedback .slider .card .header .rt p.name {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
   text-transform: uppercase;
 }
-#app .content .homeView .feedback .bottom .right .top .card .header .rt p:first-child {
-  font-weight: 700;
-  position: relative;
-  color: black;
-  top: 10px;
-  font-size: 16px;
+#app .content .homeView .feedback .slider .current {
+  display: grid;
+  gap: 30px;
+  background-color: rgb(236, 241, 247);
+  border-radius: 20px;
+  border-width: 0;
+  min-width: 652px;
+  height: 491px;
+  padding: 40px;
 }
-#app .content .homeView .feedback .bottom .right .top .card .feed h3 {
-  font-size: 16px;
-  font-weight: 700;
+@media (max-width: 900px) {
+  #app .content .homeView .feedback .slider .current {
+    padding: 30px 20px;
+    min-width: 314px;
+    height: 100%;
+  }
 }
-#app .content .homeView .feedback .bottom .right .top .card .feed p {
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: underline;
+#app .content .homeView .feedback .slider .current .info h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+#app .content .homeView .feedback .slider .current .info p {
+  transition: 1s;
+  font-size: 14px;
+}
+#app .content .homeView .feedback .slider .current .header img {
+  scale: 1;
 }
 #app .content .homeView .feedback .top {
   display: grid;
@@ -996,21 +949,101 @@ body {
   left: 0;
   right: 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   z-index: 120;
   background-color: rgba(255, 255, 255, 0);
   transition: 1.5s;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  white-space: nowrap;
+}
+#app .content .appbar .mobileMenu {
+  position: fixed;
+  top: 50px;
+  flex: 1;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+  transition: 1.5s;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./../../assets/mobile/bgac.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 12px 10px 0 10px;
+}
+#app .content .appbar .mobileMenu .bottom {
+  display: grid;
+  justify-items: start;
+  text-align: left;
+  gap: 20px;
+  padding-top: 20px;
+}
+#app .content .appbar .mobileMenu .bottom .info h4 {
+  color: rgb(20, 114, 208);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+}
+#app .content .appbar .mobileMenu .bottom .info p {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+#app .content .appbar .mobileMenu .other {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#app .content .appbar .mobileMenu .other button a:active,
+#app .content .appbar .mobileMenu .other button a:hover,
+#app .content .appbar .mobileMenu .other button a {
+  text-decoration: none;
+  color: white;
+}
+#app .content .appbar .mobileMenu .other button a:active {
+  color: white;
+}
+#app .content .appbar .mobileMenu .other button a:hover {
+  cursor: pointer;
+  color: white;
+}
+#app .content .appbar .mobileMenu .top {
+  display: grid;
+  justify-items: start;
+}
+#app .content .appbar .mobileMenu .top .slide {
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 8px;
+}
+#app .content .appbar .mobileMenu .top .slide h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#app .content .appbar .mobileMenu .top a:active,
+#app .content .appbar .mobileMenu .top a:hover,
+#app .content .appbar .mobileMenu .top a {
+  text-decoration: none;
+  color: black;
+}
+#app .content .appbar .mobileMenu .top a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .mobileMenu .top a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
 }
 #app .content .appbar .navbar-custom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px 50px;
-  height: 74px;
-  gap: 16px;
+  justify-content: space-between;
 }
 @media (max-width: 900px) {
   #app .content .appbar .navbar-custom {
@@ -1053,12 +1086,24 @@ body {
   gap: 14px;
   font-weight: 600;
   font-size: 14px;
-  height: 74px;
 }
 @media (max-width: 1330px) {
   #app .content .appbar .navbar-custom .contact button {
     display: none;
   }
+}
+#app .content .appbar .navbar-custom .contact button a:active,
+#app .content .appbar .navbar-custom .contact button a:hover,
+#app .content .appbar .navbar-custom .contact button a {
+  text-decoration: none;
+  color: white;
+}
+#app .content .appbar .navbar-custom .contact button a:active {
+  color: white;
+}
+#app .content .appbar .navbar-custom .contact button a:hover {
+  cursor: pointer;
+  color: white;
 }
 #app .content .appbar .navbar-custom .contact .mobile {
   display: none;

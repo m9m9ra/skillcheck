@@ -260,15 +260,21 @@ onMounted(() => {
       }
     }
     .right {
+      //max-width: 767px;
       max-width: 767px;
       //background-image: url("./../assets/slide/sl01.jpg");
 
       img {
+        transition: 0.8s;
+
         @media (max-width: 1270px) {
           width: 100%;
           border-radius: 0 0 20px 20px;
         }
       }
+    }
+    .right::-webkit-scrollbar {
+      width: 0;
     }
   }
 }
