@@ -1,0 +1,862 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-xxl {
+  padding: 0;
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  font-family: "Inter", Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+@media (min-width: 1400px) {
+  #app .container-xxl, #app .container-xl, #app .container-lg, #app .container-md, #app .container-sm, #app .container {
+    max-width: 1360px;
+  }
+}
+#app .content {
+  padding: 0;
+}
+#app .content .contacts {
+  display: grid;
+  gap: 100px;
+  padding: 114px 40px 100px 40px;
+  text-align: left;
+  max-width: 1360px;
+}
+@media (max-width: 1180px) {
+  #app .content .contacts {
+    padding: 114px 8px 100px 8px;
+    gap: 10px;
+  }
+}
+#app .content .contacts .form {
+  display: grid;
+  justify-items: center;
+  border: 8px solid rgb(20, 114, 208);
+  border-radius: 40px;
+  padding: 150px 0px;
+  margin-bottom: 60px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form {
+    padding: 40px 10px;
+    border: 4px solid rgb(20, 114, 208);
+    border-radius: 20px;
+  }
+}
+#app .content .contacts .form .center {
+  display: grid;
+  gap: 60px;
+}
+#app .content .contacts .form .center h4 {
+  font-size: 14px;
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center h4 {
+    font-size: 12px;
+  }
+}
+#app .content .contacts .form .center .block {
+  display: grid;
+  gap: 10px;
+}
+#app .content .contacts .form .center .block .cardBlock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+#app .content .contacts .form .center .block .cardBlock h5 {
+  font-size: 12px;
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center .block .cardBlock h5 {
+    font-size: 10px;
+  }
+}
+#app .content .contacts .form .center .block .cardBlock .card {
+  display: grid;
+  gap: 20px;
+  border: 0;
+}
+#app .content .contacts .form .center .block .cardBlock .card img {
+  width: 99%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#app .content .contacts .form .center .block .cardBlock .card img.current {
+  border: 4px solid rgb(20, 114, 208);
+}
+#app .content .contacts .form .center #block3 {
+  justify-items: start;
+}
+#app .content .contacts .form .center #block3 .text {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  /* прячем input checkbox */
+  /* стили для метки */
+  /* формируем внешний вид чекбокса в псевдоэлементе before */
+  /* вариации внешнего вида в зав-ти от статуса checkbox */
+  /* checked */
+  /* disabled */
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block3 .text {
+    gap: -20px;
+  }
+}
+#app .content .contacts .form .center #block3 .text h5 {
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  top: 6px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block3 .text h5 {
+    font-size: 12px;
+    position: relative;
+    right: 10px;
+  }
+}
+#app .content .contacts .form .center #block3 .text input {
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid rgb(20, 114, 208);
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block3 .text input {
+    width: 20px;
+    height: 20px;
+  }
+}
+#app .content .contacts .form .center #block3 .text input:checked {
+  appearance: auto;
+  background-color: rgb(20, 114, 208);
+}
+#app .content .contacts .form .center #block3 .text input[type=checkbox] {
+  display: none;
+}
+#app .content .contacts .form .center #block3 .text label {
+  color: #000;
+  cursor: default;
+  font-weight: normal;
+  line-height: 30px;
+  padding: 10px 0;
+  vertical-align: middle;
+}
+#app .content .contacts .form .center #block3 .text label:before {
+  content: " ";
+  color: #000;
+  display: inline-block;
+  font: 20px/30px Arial;
+  margin-right: 15px;
+  position: relative;
+  text-align: center;
+  text-indent: 0px;
+  width: 30px;
+  height: 30px;
+  background: #FFF;
+  border: 1px solid rgb(20, 114, 208);
+  border-image: initial;
+  vertical-align: middle;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block3 .text label:before {
+    scale: 0.7;
+  }
+}
+#app .content .contacts .form .center #block3 .text input:checked + label:before {
+  color: white;
+  background-color: rgb(20, 114, 208);
+  content: "✓";
+  border-radius: 4px;
+}
+#app .content .contacts .form .center #block3 .text input:disabled + label:before {
+  background: #eee;
+  color: #aaa;
+}
+#app .content .contacts .form .center #block8 {
+  justify-items: start;
+}
+#app .content .contacts .form .center #block8 input[type=file] {
+  display: none;
+}
+#app .content .contacts .form .center #block8 .custom-file-upload {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: rgb(20, 114, 208);
+  color: white;
+  font-weight: 700;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 99%;
+  border-radius: 8px;
+  padding: 34px 20px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block8 .custom-file-upload {
+    padding: 14px 10px;
+  }
+}
+#app .content .contacts .form .center #block9 input {
+  padding: 25px 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block9 input {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+}
+#app .content .contacts .form .center #block9 input:focus {
+  outline-color: rgb(20, 114, 208);
+  color: rgb(20, 114, 208);
+  border: 1px solid rgb(20, 114, 208);
+}
+#app .content .contacts .form .center #block10 {
+  justify-items: start;
+}
+#app .content .contacts .form .center #block10 button {
+  padding: 25px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#app .content .contacts .form .center #block10 p {
+  font-size: 10px;
+  max-width: 400px;
+}
+#app .content .contacts .form .center #block10 p span {
+  color: rgb(20, 114, 208);
+}
+#app .content .contacts .form .center #block4, #app .content .contacts .form .center #block7 {
+  justify-items: start;
+}
+#app .content .contacts .form .center #block4 .text, #app .content .contacts .form .center #block7 .text {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  /* прячем input checkbox */
+  /* стили для метки */
+  /* формируем внешний вид чекбокса в псевдоэлементе before */
+  /* вариации внешнего вида в зав-ти от статуса checkbox */
+  /* checked */
+  /* disabled */
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block4 .text, #app .content .contacts .form .center #block7 .text {
+    gap: -20px;
+  }
+}
+#app .content .contacts .form .center #block4 .text h5, #app .content .contacts .form .center #block7 .text h5 {
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  top: 6px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block4 .text h5, #app .content .contacts .form .center #block7 .text h5 {
+    font-size: 12px;
+    position: relative;
+    right: 10px;
+  }
+}
+#app .content .contacts .form .center #block4 .text input, #app .content .contacts .form .center #block7 .text input {
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgb(20, 114, 208);
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block4 .text input, #app .content .contacts .form .center #block7 .text input {
+    width: 20px;
+    height: 20px;
+  }
+}
+#app .content .contacts .form .center #block4 .text input:checked, #app .content .contacts .form .center #block7 .text input:checked {
+  appearance: auto;
+  clip-path: circle(50% at 50% 50%);
+  background-color: rgb(20, 114, 208);
+}
+#app .content .contacts .form .center #block4 .text input[type=checkbox], #app .content .contacts .form .center #block7 .text input[type=checkbox] {
+  display: none;
+}
+#app .content .contacts .form .center #block4 .text label, #app .content .contacts .form .center #block7 .text label {
+  color: #000;
+  cursor: default;
+  font-weight: normal;
+  line-height: 30px;
+  padding: 10px 0;
+  vertical-align: middle;
+}
+#app .content .contacts .form .center #block4 .text label:before, #app .content .contacts .form .center #block7 .text label:before {
+  content: " ";
+  color: #000;
+  display: inline-block;
+  font: 20px/30px Arial;
+  margin-right: 15px;
+  position: relative;
+  text-align: center;
+  text-indent: 0px;
+  width: 30px;
+  height: 30px;
+  background: #FFF;
+  border: 1px solid rgb(20, 114, 208);
+  border-image: initial;
+  vertical-align: middle;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block4 .text label:before, #app .content .contacts .form .center #block7 .text label:before {
+    scale: 0.7;
+  }
+}
+#app .content .contacts .form .center #block4 .text input:checked + label:before, #app .content .contacts .form .center #block7 .text input:checked + label:before {
+  color: white;
+  background-color: rgb(20, 114, 208);
+  content: "✓";
+  border-radius: 50%;
+}
+#app .content .contacts .form .center #block4 .text input:disabled + label:before, #app .content .contacts .form .center #block7 .text input:disabled + label:before {
+  background: #eee;
+  color: #aaa;
+}
+#app .content .contacts .form .center #block5 input[type=range]::-webkit-slider-runnable-track, #app .content .contacts .form .center #block6 input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: rgb(20, 114, 208);
+}
+#app .content .contacts .form .center #block5 input[type=range]::-webkit-slider-thumb, #app .content .contacts .form .center #block6 input[type=range]::-webkit-slider-thumb {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  position: relative;
+  height: 20px;
+  width: 100px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+  box-shadow: none;
+}
+#app .content .contacts .form .center #block5 .range-text, #app .content .contacts .form .center #block6 .range-text {
+  position: relative;
+  left: 0;
+  bottom: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 114, 208);
+  text-align: center;
+  color: white;
+  line-height: 1;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transform: translate(0, 2px);
+  cursor: pointer;
+}
+#app .content .contacts .form .center #block5 .bottom, #app .content .contacts .form .center #block6 .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  bottom: 30px;
+}
+#app .content .contacts .form .center #block5 .bottom p, #app .content .contacts .form .center #block6 .bottom p {
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .center #block5 .bottom p, #app .content .contacts .form .center #block6 .bottom p {
+    font-size: 12px;
+  }
+}
+#app .content .contacts .form .header {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+#app .content .contacts .form .header p {
+  max-width: 570px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .form .header {
+    gap: 0;
+    margin-bottom: 20px;
+  }
+  #app .content .contacts .form .header p {
+    font-size: 12px;
+  }
+}
+#app .content .contacts .header h1 {
+  font-weight: 700;
+  color: rgb(47, 47, 47);
+  font-size: 44px;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+#app .content .contacts .header h1 span {
+  color: rgb(20, 114, 208);
+}
+@media (max-width: 800px) {
+  #app .content .contacts .header h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-top: 12px;
+  }
+}
+#app .content .contacts .header h3 {
+  font-size: 12px;
+  color: rgb(162, 160, 160);
+  font-weight: 200;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .header h3 {
+    font-size: 10px;
+  }
+}
+#app .content .contacts .header h3 span {
+  color: rgb(47, 47, 47);
+}
+#app .content .contacts .bottom {
+  max-height: 557px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+@media (max-width: 1270px) {
+  #app .content .contacts .bottom {
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 740px;
+  }
+}
+#app .content .contacts .bottom .left {
+  height: 537px;
+  background-color: rgb(20, 114, 208);
+  border-radius: 40px 0px 0px 40px;
+  padding: 50px 60px 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-image: url("./../assets/slide/bgsl1.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+#app .content .contacts .bottom .left .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 1270px) {
+  #app .content .contacts .bottom .left {
+    border-radius: 20px 20px 0 0;
+    max-width: 767px;
+    padding: 20px 20px 0 20px;
+  }
+}
+#app .content .contacts .bottom .left h3 {
+  font-size: 28px;
+  max-height: 50px;
+}
+@media (max-width: 1080px) {
+  #app .content .contacts .bottom .left h3 {
+    font-size: 18px;
+  }
+}
+#app .content .contacts .bottom .left p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1080px) {
+  #app .content .contacts .bottom .left p {
+    font-size: 12px;
+    bottom: 0;
+  }
+}
+#app .content .contacts .bottom .left .slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+@media (max-width: 1000px) {
+  #app .content .contacts .bottom .left .slide {
+    padding-bottom: 0;
+  }
+}
+#app .content .contacts .bottom .left .slide .lf p {
+  color: rgb(180, 205, 237);
+  font-weight: 600;
+  font-size: 24px;
+  bottom: 0;
+}
+#app .content .contacts .bottom .left .slide .lf p span {
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+}
+@media (max-width: 1080px) {
+  #app .content .contacts .bottom .left .slide .lf p {
+    font-size: 14px;
+    bottom: 0;
+  }
+  #app .content .contacts .bottom .left .slide .lf p span {
+    font-size: 28px;
+  }
+}
+#app .content .contacts .bottom .left .slide .rt {
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+@media (min-width: 1080px) {
+  #app .content .contacts .bottom .left .slide .rt {
+    scale: 1.2;
+  }
+}
+#app .content .contacts .bottom .left .slide .rt svg:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+#app .content .contacts .bottom .right {
+  max-width: 767px;
+}
+@media (max-width: 1270px) {
+  #app .content .contacts .bottom .right img {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+}
+#app .content .appbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 120;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 1.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+#app .content .appbar .mobileMenu {
+  position: fixed;
+  top: 50px;
+  flex: 1;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+  transition: 1.5s;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./../assets/mobile/bgac.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 12px 10px 0 10px;
+}
+#app .content .appbar .mobileMenu .bottom {
+  display: grid;
+  justify-items: start;
+  text-align: left;
+  gap: 20px;
+  padding-top: 20px;
+}
+#app .content .appbar .mobileMenu .bottom .info h4 {
+  color: rgb(20, 114, 208);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+}
+#app .content .appbar .mobileMenu .bottom .info p {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+#app .content .appbar .mobileMenu .other {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#app .content .appbar .mobileMenu .other button a:active,
+#app .content .appbar .mobileMenu .other button a:hover,
+#app .content .appbar .mobileMenu .other button a {
+  text-decoration: none;
+  color: white;
+}
+#app .content .appbar .mobileMenu .other button a:active {
+  color: white;
+}
+#app .content .appbar .mobileMenu .other button a:hover {
+  cursor: pointer;
+  color: white;
+}
+#app .content .appbar .mobileMenu .top {
+  display: grid;
+  justify-items: start;
+}
+#app .content .appbar .mobileMenu .top .slide {
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 8px;
+}
+#app .content .appbar .mobileMenu .top .slide h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#app .content .appbar .mobileMenu .top a:active,
+#app .content .appbar .mobileMenu .top a:hover,
+#app .content .appbar .mobileMenu .top a {
+  text-decoration: none;
+  color: black;
+}
+#app .content .appbar .mobileMenu .top a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .mobileMenu .top a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .navbar-custom {
+  display: flex;
+  align-items: center;
+  padding: 10px 50px;
+  justify-content: space-between;
+}
+@media (max-width: 900px) {
+  #app .content .appbar .navbar-custom {
+    padding: 10px 13px;
+  }
+}
+#app .content .appbar .navbar-custom ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+#app .content .appbar .navbar-custom ul li {
+  font-size: 14px;
+  font-weight: 500;
+}
+#app .content .appbar .navbar-custom ul li a:active,
+#app .content .appbar .navbar-custom ul li a:hover,
+#app .content .appbar .navbar-custom ul li a {
+  text-decoration: none;
+  color: black;
+}
+#app .content .appbar .navbar-custom ul li a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .navbar-custom ul li a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom ul {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 14px;
+}
+@media (max-width: 1330px) {
+  #app .content .appbar .navbar-custom .contact button {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact button a:active,
+#app .content .appbar .navbar-custom .contact button a:hover,
+#app .content .appbar .navbar-custom .contact button a {
+  text-decoration: none;
+  color: white;
+}
+#app .content .appbar .navbar-custom .contact button a:active {
+  color: white;
+}
+#app .content .appbar .navbar-custom .contact button a:hover {
+  cursor: pointer;
+  color: white;
+}
+#app .content .appbar .navbar-custom .contact .mobile {
+  display: none;
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom .contact .mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #app .content .appbar .navbar-custom .contact .mobile div {
+    width: 30px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: #000;
+  }
+}
+#app .content .footbar-fluid {
+  background-color: rgb(20, 114, 208);
+  min-height: 535px;
+  background-image: url("./../assets/svg/footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+#app .content .footbar-fluid .footbar .divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.28);
+}
+#app .content .footbar-fluid .footbar .top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding: 60px 40px;
+}
+#app .content .footbar-fluid .footbar .top svg:first-child {
+  display: none;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .top {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px 0;
+  }
+  #app .content .footbar-fluid .footbar .top svg:last-child {
+    display: none;
+  }
+  #app .content .footbar-fluid .footbar .top svg:first-child {
+    display: block;
+  }
+}
+#app .content .footbar-fluid .footbar .top .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+}
+#app .content .footbar-fluid .footbar .top .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .content .footbar-fluid .footbar .bottom {
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1199px) and (min-width: 901px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 0;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide {
+  display: none;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .slide {
+    display: flex;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide h3 {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+#app .content .footbar-fluid .footbar .bottom .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+  max-width: 247px;
+  display: grid;
+  gap: 14px;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .card {
+    display: none;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .main {
+  padding: 0;
+}
+
+/*# sourceMappingURL=index.css.map */
