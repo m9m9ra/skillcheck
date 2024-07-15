@@ -620,7 +620,7 @@ body {
         padding: 90px 30px;
 
         @media (max-width: 1000px){
-          padding: 55px 10px 75px 10px;
+          padding: 55px 6px 75px 6px;
         }
 
         .top {
@@ -759,15 +759,51 @@ body {
             }
           }
           .right {
+            //max-width: 767px;
             max-width: 767px;
+            box-sizing: border-box;
             //background-image: url("./../assets/slide/sl01.jpg");
 
             img {
+              transition: 0.8s;
+
               @media (max-width: 1270px) {
                 width: 100%;
                 border-radius: 0 0 20px 20px;
               }
             }
+
+            //@media (max-width: 360px){
+            //  max-width: 360px;
+            //}
+
+            .swiper {
+              //width: 767px;
+              //width: 100% ;
+              //height: 537px;
+              box-sizing: border-box;
+
+              @media (max-width: 800px) and (min-width: 420px){
+                min-width: 320px;
+                width: 89vw;
+                border-radius: 0 0 20px 20px;
+                //height: 250px;
+                //height: 40%;
+              }
+
+              @media (max-width: 420px){
+                min-width: 320px;
+                width: 90vw;
+                //width: 30vw;
+                border-radius: 0 0 20px 20px;
+                //height: 250px;
+                //height: 40%;
+              }
+            }
+          }
+
+          .right::-webkit-scrollbar {
+            width: 0;
           }
         }
       }
@@ -810,10 +846,6 @@ body {
             overflow-y: hidden;
             //overflow-x: hidden;
             gap: 20px;
-            &::-webkit-scrollbar {
-              width: 10px;
-              background-color: #f9f9fd;
-            }
             .card {
               padding: 20px 50px;
               display: grid;
@@ -872,6 +904,11 @@ body {
                 }
               }
             }
+          }
+          .cardBlock::-webkit-scrollbar {
+            //width: 10px;
+            //background-color: #f9f9fd;
+            width: 0;
           }
 
           .top {

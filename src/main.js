@@ -4,8 +4,11 @@ import App from './App.vue'
 import './registerServiceWorker'
 import "@/assets/main.css";
 import "@/assets/bootstrap/css/bootstrap.css";
+// import "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css";
+// import "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
 import router from './router'
 import store from './store'
+
 
 createApp(App)
     .use(store)

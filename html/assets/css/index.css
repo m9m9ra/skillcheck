@@ -573,7 +573,7 @@ body {
 }
 @media (max-width: 1000px) {
   #app .content .homeView .sliderTop {
-    padding: 55px 10px 75px 10px;
+    padding: 55px 6px 75px 6px;
   }
 }
 #app .content .homeView .sliderTop .top {
@@ -709,12 +709,36 @@ body {
 }
 #app .content .homeView .sliderTop .bottom .right {
   max-width: 767px;
+  box-sizing: border-box;
+}
+#app .content .homeView .sliderTop .bottom .right img {
+  transition: 0.8s;
 }
 @media (max-width: 1270px) {
   #app .content .homeView .sliderTop .bottom .right img {
     width: 100%;
     border-radius: 0 0 20px 20px;
   }
+}
+#app .content .homeView .sliderTop .bottom .right .swiper {
+  box-sizing: border-box;
+}
+@media (max-width: 800px) and (min-width: 420px) {
+  #app .content .homeView .sliderTop .bottom .right .swiper {
+    min-width: 320px;
+    width: 89vw;
+    border-radius: 0 0 20px 20px;
+  }
+}
+@media (max-width: 420px) {
+  #app .content .homeView .sliderTop .bottom .right .swiper {
+    min-width: 320px;
+    width: 90vw;
+    border-radius: 0 0 20px 20px;
+  }
+}
+#app .content .homeView .sliderTop .bottom .right::-webkit-scrollbar {
+  width: 0;
 }
 #app .content .homeView .topBlockWrapper {
   background-color: #FFFFFF;
@@ -753,10 +777,6 @@ body {
   justify-content: space-between;
   overflow-y: hidden;
   gap: 20px;
-}
-#app .content .homeView .topBlockWrapper .topBlock .cardBlock::-webkit-scrollbar {
-  width: 10px;
-  background-color: #f9f9fd;
 }
 #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card {
   padding: 20px 50px;
@@ -810,6 +830,9 @@ body {
 }
 #app .content .homeView .topBlockWrapper .topBlock .cardBlock .card:hover .bottom p {
   color: #FFFFFF;
+}
+#app .content .homeView .topBlockWrapper .topBlock .cardBlock::-webkit-scrollbar {
+  width: 0;
 }
 #app .content .homeView .topBlockWrapper .topBlock .top {
   display: grid;
