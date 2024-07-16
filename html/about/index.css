@@ -1,0 +1,604 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-xxl {
+  padding: 0;
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  font-family: "Inter", Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+@media (min-width: 1400px) {
+  #app .container-xxl, #app .container-xl, #app .container-lg, #app .container-md, #app .container-sm, #app .container {
+    max-width: 1360px;
+  }
+}
+#app .content {
+  padding: 0;
+}
+#app .content .contacts {
+  display: grid;
+  gap: 150px;
+  padding: 114px 40px 100px 40px;
+  text-align: left;
+  max-width: 1360px;
+}
+@media (max-width: 1180px) {
+  #app .content .contacts {
+    padding: 114px 8px 100px 8px;
+    gap: 10px;
+  }
+}
+#app .content .contacts .map {
+  display: grid;
+  background: url("./../assets/about/map.png") no-repeat center;
+  background-size: contain;
+}
+#app .content .contacts .map h4 {
+  color: rgb(162, 160, 160);
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+#app .content .contacts .map .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 40px 0;
+  border: none;
+  background: none;
+  border-radius: 0;
+  border-top: 1px solid rgb(162, 160, 160);
+}
+@media (max-width: 800px) {
+  #app .content .contacts .map .card {
+    flex-direction: column;
+  }
+}
+#app .content .contacts .map .card h5 {
+  font-size: 14px;
+  max-width: 322px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .map .card h5 {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+#app .content .contacts .map .card h6 {
+  font-size: 120px;
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .map .card h6 {
+    font-size: 80px;
+  }
+}
+#app .content .contacts .map .card h6 span {
+  color: rgb(20, 114, 208);
+}
+#app .content .contacts .feedback .top {
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+#app .content .contacts .feedback .top h2 {
+  font-size: 44px;
+  font-weight: 700;
+  text-align: center;
+  max-width: 1000px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .feedback .top h2 {
+    font-size: 22px;
+  }
+}
+#app .content .contacts .feedback .top h2 span {
+  color: rgb(20, 114, 208);
+}
+#app .content .contacts .feedback .top p {
+  font-size: 14px;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .feedback .top p {
+    font-size: 12px;
+  }
+}
+#app .content .contacts .feedback .cardContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .feedback .cardContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#app .content .contacts .feedback .cardContainer .card {
+  border: none;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .feedback .cardContainer .card {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+  }
+}
+#app .content .contacts .feedback .cardContainer .card img {
+  margin-bottom: 34px;
+}
+#app .content .contacts .feedback .cardContainer .card h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .feedback .cardContainer .card h4 {
+    font-size: 18px;
+  }
+}
+#app .content .contacts .feedback .cardContainer .card p {
+  font-size: 14px;
+}
+@media (max-width: 800px) {
+  #app .content .contacts .feedback .cardContainer .card p {
+    max-width: 300px;
+  }
+}
+#app .content .contacts .bottom {
+  max-height: 557px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+@media (max-width: 1270px) {
+  #app .content .contacts .bottom {
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 740px;
+  }
+}
+#app .content .contacts .bottom .left {
+  height: 537px;
+  background-color: rgb(20, 114, 208);
+  border-radius: 40px 0px 0px 40px;
+  padding: 50px 60px 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-image: url("./../assets/slide/bgsl1.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+#app .content .contacts .bottom .left .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 1270px) {
+  #app .content .contacts .bottom .left {
+    border-radius: 20px 20px 0 0;
+    max-width: 767px;
+    padding: 20px 20px 0 20px;
+  }
+}
+#app .content .contacts .bottom .left h3 {
+  font-size: 28px;
+  max-height: 50px;
+}
+@media (max-width: 1080px) {
+  #app .content .contacts .bottom .left h3 {
+    font-size: 18px;
+  }
+}
+#app .content .contacts .bottom .left p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1080px) {
+  #app .content .contacts .bottom .left p {
+    font-size: 12px;
+    bottom: 0;
+  }
+}
+#app .content .contacts .bottom .left .slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+@media (max-width: 1000px) {
+  #app .content .contacts .bottom .left .slide {
+    padding-bottom: 0;
+  }
+}
+#app .content .contacts .bottom .left .slide .lf p {
+  color: rgb(180, 205, 237);
+  font-weight: 600;
+  font-size: 24px;
+  bottom: 0;
+}
+#app .content .contacts .bottom .left .slide .lf p span {
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+}
+@media (max-width: 1080px) {
+  #app .content .contacts .bottom .left .slide .lf p {
+    font-size: 14px;
+    bottom: 0;
+  }
+  #app .content .contacts .bottom .left .slide .lf p span {
+    font-size: 28px;
+  }
+}
+#app .content .contacts .bottom .left .slide .rt {
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+@media (min-width: 1080px) {
+  #app .content .contacts .bottom .left .slide .rt {
+    scale: 1.2;
+  }
+}
+#app .content .contacts .bottom .left .slide .rt svg:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+#app .content .contacts .bottom .right {
+  max-width: 767px;
+}
+@media (max-width: 1270px) {
+  #app .content .contacts .bottom .right img {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+}
+#app .content #about {
+  padding: 0;
+}
+#app .content .topBlock {
+  height: 830px;
+  background: url("./../assets/about/bacgr.png");
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  #app .content .topBlock {
+    height: 680px;
+  }
+}
+#app .content .topBlock .info {
+  text-align: left;
+  padding-left: 50px;
+}
+@media (max-width: 800px) {
+  #app .content .topBlock .info {
+    padding-left: 15px;
+  }
+}
+#app .content .topBlock .info h1 {
+  color: #FFFFFF;
+  max-width: 748px;
+  font-size: 44px;
+  font-weight: 700;
+}
+@media (max-width: 800px) {
+  #app .content .topBlock .info h1 {
+    font-size: 22px;
+  }
+}
+#app .content .topBlock .info h3 {
+  color: #FFFFFF;
+  font-size: 20px;
+}
+@media (max-width: 800px) {
+  #app .content .topBlock .info h3 {
+    font-size: 12px;
+  }
+}
+#app .content .appbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 120;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 1.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+#app .content .appbar .mobileMenu {
+  position: fixed;
+  top: 50px;
+  flex: 1;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+  transition: 1.5s;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./../assets/mobile/bgac.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 12px 10px 0 10px;
+}
+#app .content .appbar .mobileMenu .bottom {
+  display: grid;
+  justify-items: start;
+  text-align: left;
+  gap: 20px;
+  padding-top: 20px;
+}
+#app .content .appbar .mobileMenu .bottom .info h4 {
+  color: rgb(20, 114, 208);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+}
+#app .content .appbar .mobileMenu .bottom .info p {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+#app .content .appbar .mobileMenu .other {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#app .content .appbar .mobileMenu .other button a:active,
+#app .content .appbar .mobileMenu .other button a:hover,
+#app .content .appbar .mobileMenu .other button a {
+  text-decoration: none;
+  color: white;
+}
+#app .content .appbar .mobileMenu .other button a:active {
+  color: white;
+}
+#app .content .appbar .mobileMenu .other button a:hover {
+  cursor: pointer;
+  color: white;
+}
+#app .content .appbar .mobileMenu .top {
+  display: grid;
+  justify-items: start;
+}
+#app .content .appbar .mobileMenu .top .slide {
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 8px;
+}
+#app .content .appbar .mobileMenu .top .slide h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#app .content .appbar .mobileMenu .top a:active,
+#app .content .appbar .mobileMenu .top a:hover,
+#app .content .appbar .mobileMenu .top a {
+  text-decoration: none;
+  color: black;
+}
+#app .content .appbar .mobileMenu .top a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .mobileMenu .top a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .navbar-custom {
+  display: flex;
+  align-items: center;
+  padding: 10px 50px;
+  justify-content: space-between;
+}
+@media (max-width: 900px) {
+  #app .content .appbar .navbar-custom {
+    padding: 10px 13px;
+  }
+}
+#app .content .appbar .navbar-custom ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+#app .content .appbar .navbar-custom ul li {
+  font-size: 14px;
+  font-weight: 500;
+}
+#app .content .appbar .navbar-custom ul li a:active,
+#app .content .appbar .navbar-custom ul li a:hover,
+#app .content .appbar .navbar-custom ul li a {
+  text-decoration: none;
+  color: black;
+}
+#app .content .appbar .navbar-custom ul li a:active {
+  color: rgb(20, 114, 208);
+}
+#app .content .appbar .navbar-custom ul li a:hover {
+  cursor: pointer;
+  color: rgb(20, 114, 208);
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom ul {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 14px;
+}
+@media (max-width: 1330px) {
+  #app .content .appbar .navbar-custom .contact button {
+    display: none;
+  }
+}
+#app .content .appbar .navbar-custom .contact button a:active,
+#app .content .appbar .navbar-custom .contact button a:hover,
+#app .content .appbar .navbar-custom .contact button a {
+  text-decoration: none;
+  color: white;
+}
+#app .content .appbar .navbar-custom .contact button a:active {
+  color: white;
+}
+#app .content .appbar .navbar-custom .contact button a:hover {
+  cursor: pointer;
+  color: white;
+}
+#app .content .appbar .navbar-custom .contact .mobile {
+  display: none;
+}
+@media (max-width: 1000px) {
+  #app .content .appbar .navbar-custom .contact .mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #app .content .appbar .navbar-custom .contact .mobile div {
+    width: 30px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: #000;
+  }
+}
+#app .content .footbar-fluid {
+  background-color: rgb(20, 114, 208);
+  min-height: 535px;
+  background-image: url("./../assets/svg/footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+#app .content .footbar-fluid .footbar .divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.28);
+}
+#app .content .footbar-fluid .footbar .top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding: 60px 40px;
+}
+#app .content .footbar-fluid .footbar .top svg:first-child {
+  display: none;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .top {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px 0;
+  }
+  #app .content .footbar-fluid .footbar .top svg:last-child {
+    display: none;
+  }
+  #app .content .footbar-fluid .footbar .top svg:first-child {
+    display: block;
+  }
+}
+#app .content .footbar-fluid .footbar .top .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+}
+#app .content .footbar-fluid .footbar .top .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .content .footbar-fluid .footbar .bottom {
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1199px) and (min-width: 901px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 0;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide {
+  display: none;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .slide {
+    display: flex;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .slide h3 {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+#app .content .footbar-fluid .footbar .bottom .card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  color: #FFFFFF;
+  max-width: 247px;
+  display: grid;
+  gap: 14px;
+}
+@media (max-width: 900px) {
+  #app .content .footbar-fluid .footbar .bottom .card {
+    display: none;
+  }
+}
+#app .content .footbar-fluid .footbar .bottom .card p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#app .main {
+  padding: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

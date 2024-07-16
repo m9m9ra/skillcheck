@@ -31,7 +31,7 @@
         <li><a href="/analysis">АНАЛИЗ ВОДЫ</a></li>
         <li><a href="/consumables">РАСХОДНИКИ</a></li>
         <li><a href="/installation">МОНТАЖ</a></li>
-        <li>КОМПАНИЯ</li>
+        <li><a href="/about">КОМПАНИЯ</a></li>
         <li><a href="/contacts">КОНТАКТЫ</a></li>
       </ul>
 
@@ -80,7 +80,8 @@
           <h3>МОНТАЖ</h3>
           <p>→</p>
         </a>
-        <a class="slide">
+        <a href="/about"
+           class="slide">
           <h3>О КОМПАНИИ</h3>
           <p>→</p>
         </a>
