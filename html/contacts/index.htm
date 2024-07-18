@@ -18,7 +18,7 @@
     <div class="main container-fluid">
         <div class="content">
             <!--            todo APPBAR -->
-            <div id="appbar" class="appbar" :style="animated ? `background: #FFF;` : ``">
+            <div id="appbar" class="appbar" :style="animated || showModal ? `background: #FFF;` : ``">
                 <div class="navbar-custom container-xxl">
                     <div class="logo" style="cursor: pointer">
                         <svg width="128" @click="navigation" height="30" viewBox="0 0 128 30" fill="none" xmlns="http://www.w3.org/2000/svg">
